@@ -3,7 +3,7 @@ package src.com.sistemapacoteviagens;
 import java.time.LocalDate;
 import java.time.Period;
 
-class Pessoa {
+abstract class Pessoa {
 
     private String nome;
     private String sobrenome;
