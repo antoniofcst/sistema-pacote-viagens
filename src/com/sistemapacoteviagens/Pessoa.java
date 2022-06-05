@@ -18,9 +18,7 @@ abstract class Pessoa {
         this.nome = nome;
     }
 
-    public String getSobrenome() {
-        return this.sobrenome;
-    }
+    public String getSobrenome() { return this.sobrenome; }
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
     }
