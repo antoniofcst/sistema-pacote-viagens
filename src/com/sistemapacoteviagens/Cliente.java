@@ -12,7 +12,7 @@ public class Cliente extends Pessoa {
     private ArrayList<PacotesDeViagens> pacoteDoCliente = new ArrayList<>();
 
     public Cliente(String nome, String sobrenome, String cpf, String sexo, String endereco, int telefone, String email) {
-        super(setNome(nome), sobrenome, cpf, sexo);
+        super(nome, sobrenome, cpf, sexo);
         this.setTelefone(telefone);
         this.setEmail(email);
         this.setEndereco(endereco);
@@ -21,9 +21,7 @@ public class Cliente extends Pessoa {
     public int getTelefone() {
         return this.telefone;
     }
-    public void setTelefone(int tel) {
-        this.telefone = tel;
-    }
+    public void setTelefone(int tel) { this.telefone = tel; }
     public String getEmail() {
         return this.email;
     }
