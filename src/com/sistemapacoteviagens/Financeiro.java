@@ -31,10 +31,4 @@ public class Financeiro {
         System.out.println("Para cartão-crédito digite: 3");
         System.out.println("Para dinheiro em espécie digite: 4");
     }
-
-    public void menu(int opcao){
-        imprima_forma_de_pagamento();
-        forma_de_pagamento(opcao);
-    }
-
 }
