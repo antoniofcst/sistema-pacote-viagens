@@ -13,8 +13,27 @@ public class Cliente extends Pessoa {
 
     public Cliente(String nome, String sobrenome, String cpf, String sexo, String endereco, int telefone, String email) {
         super(nome, sobrenome, cpf, sexo);
-        this.telefone = telefone;
+        this.setTelefone(telefone);
+        this.setEmail(email);
+        this.setEndereco(endereco);
+    }
+
+    public int getTelefone() {
+        return this.telefone;
+    }
+    public void setTelefone(int tel) {
+        this.telefone = tel;
+    }
+    public String getEmail() {
+        return this.email;
+    }
+    public void setEmail(String email) {
         this.email = email;
-        this.endereco = endereco;
+    }
+    public String getEndereco() {
+        return this.endereco;
+    }
+    public void setEndereco(String endc) {
+        this.endereco = endc;
     }
 }
