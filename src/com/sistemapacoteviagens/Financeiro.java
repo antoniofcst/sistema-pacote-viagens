@@ -8,13 +8,8 @@ public class Financeiro {
     public Financeiro (String fmp){
         this.FormaDePagamento = fmp;
     }
-    public String getFormaDePagamento() {
-        return this.FormaDePagamento;
-    }
-    public void setFormaDePagamento(String fp) {
-        this.FormaDePagamento = fp;
-    }
-
+    public String getFormaDePagamento() { return this.FormaDePagamento; }
+    public void setFormaDePagamento(String fp) { this.FormaDePagamento = fp; }
      public void forma_de_pagamento(int opcao) {
             switch (opcao) {
             case 1: setFormaDePagamento("PIX"); break;

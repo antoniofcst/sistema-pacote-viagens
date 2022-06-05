@@ -15,23 +15,10 @@ public class Agencia implements AgenciaInterface{
         this.setCnpjAgencia(cnpj);
         this.setLocalDaAgencia(lda);
     }
-
-    public String getNomeAgencia() {
-        return this.nomeAgencia;
-    }
-    public void setNomeAgencia(String nma) {
-        this.nomeAgencia = nma;
-    }
-    public String getCnpjAgencia() {
-        return this.cnpjAgencia;
-    }
-    public void setCnpjAgencia(String cnpj) {
-        this.cnpjAgencia = cnpj;
-    }
-    public String getLocalDaAgencia() {
-        return this.localDaAgencia;
-    }
-    public void setLocalDaAgencia(String lda) {
-        this.localDaAgencia = lda;
-    }
+    public String getNomeAgencia() { return this.nomeAgencia; }
+    public void setNomeAgencia(String nma) { this.nomeAgencia = nma; }
+    public String getCnpjAgencia() { return this.cnpjAgencia; }
+    public void setCnpjAgencia(String cnpj) { this.cnpjAgencia = cnpj; }
+    public String getLocalDaAgencia() { return this.localDaAgencia; }
+    public void setLocalDaAgencia(String lda) { this.localDaAgencia = lda; }
 }
