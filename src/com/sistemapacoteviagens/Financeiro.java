@@ -6,7 +6,7 @@ public class Financeiro {
         this.formaDePagamento = formaDePagamento;
     }
 
-    private String choosePayment(String metodoDePagamento) {
+    private void choosePayment(String metodoDePagamento) {
         switch (metodoDePagamento) {
             case "PIX":
                 setFormaDePagamento(metodoDePagamento);
