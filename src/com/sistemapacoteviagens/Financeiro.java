@@ -1,12 +1,12 @@
 package src.com.sistemapacoteviagens;
 
 public class Financeiro {
-    public String formaDePagamento;
-    public void setFormaDePagamento(String formaDePagamento) {
+    private String formaDePagamento;
+    private void setFormaDePagamento(String formaDePagamento) {
         this.formaDePagamento = formaDePagamento;
     }
 
-    private void choosePayment(String metodoDePagamento) {
+    public void choosePayment(String metodoDePagamento) {
         switch (metodoDePagamento) {
             case "PIX":
                 setFormaDePagamento(metodoDePagamento);

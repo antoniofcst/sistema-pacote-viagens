@@ -46,9 +46,9 @@ public class Cliente extends Pessoa {
 
     public Cliente(String nome, String sobrenome, String cpf, String sexo, String endereco, int telefone, String email) {
         super(nome, sobrenome, cpf, sexo);
-        this.setTelefone(telefone);
-        this.setEmail(email);
-        this.setEndereco(endereco);
+        setEndereco(endereco);
+        setTelefone(telefone);
+        setEmail(email);
     }
 
 
