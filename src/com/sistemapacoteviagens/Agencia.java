@@ -5,9 +5,8 @@ public class Agencia implements AgenciaInterface{
     private String nomeAgencia;
     private String cnpjAgencia;
     private String localDaAgencia;
-    private ArrayList<Pacote> pacoteOfertado = new ArrayList<>();
-    private Financeiro financeiro;
-    private Pacote pacotesDeViagem;
+    private Financeiro financeiro = new Financeiro();
+    private Pacote pacote;
     private Cliente cliente;
 
     public String getNomeAgencia() {
@@ -34,22 +33,39 @@ public class Agencia implements AgenciaInterface{
         this.localDaAgencia = localDaAgencia;
     }
 
-    public ArrayList<Pacote> getPacoteOfertado() {
-        return pacoteOfertado;
+
+    public Financeiro getFinanceiro() {
+        return financeiro;
     }
 
-    public void setPacoteOfertado(ArrayList<Pacote> pacoteOfertado) {
-        this.pacoteOfertado = pacoteOfertado;
+    public void setFinanceiro(Financeiro financeiro) {
+        this.financeiro = financeiro;
     }
 
-    public Agencia(String nomeAgencia, String cnpjAgencia, String localDaAgencia, ArrayList<Pacote> pacoteOfertado) {
+    public Pacote getPacote() {
+        return pacote;
+    }
+
+    public void setPacote(Pacote pacote) {
+        this.pacote = pacote;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Agencia(String nomeAgencia, String cnpjAgencia, String localDaAgencia, Cliente cliente, Financeiro financeiro, Pacote pacote) {
         setNomeAgencia(nomeAgencia);
         setCnpjAgencia(cnpjAgencia);
         setLocalDaAgencia(localDaAgencia);
-        setPacoteOfertado(pacoteOfertado);
+        setFinanceiro(financeiro);
+        setPacote(pacote);
+        setCliente(cliente);
     }
-    // posso criar um cliente na hora que o cliente escolher um pacote? tipo vou só atribuir a variavel cliente com um cliente quando algum cliente comprar
-    // ao inves de atribuir logo no construtor
     @Override
     public void escolhaDeServico() {
 

@@ -5,9 +5,8 @@ import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
-        Financeiro financeiroAgencia = new Financeiro();
-        financeiroAgencia.choosePayment("PIX");
-
-        System.out.println(financeiroAgencia.formaDePagamento);
+        Cliente marcio = new Cliente();
+        Pacote pacote = new Pacote();
+        Agencia agenciaCeara = new Agencia("");
     }
 }
