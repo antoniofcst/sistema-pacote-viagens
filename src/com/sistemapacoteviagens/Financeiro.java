@@ -2,6 +2,10 @@ package src.com.sistemapacoteviagens;
 
 public class Financeiro {
     private String formaDePagamento;
+
+    public String getFormaDePagamento() {
+        return this.formaDePagamento;
+    }
     public void setFormaDePagamento(String formaDePagamento) {
         this.formaDePagamento = formaDePagamento;
     }
