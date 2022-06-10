@@ -5,20 +5,89 @@ public class Agencia implements AgenciaInterface{
     private String nomeAgencia;
     private String cnpjAgencia;
     private String localDaAgencia;
-    private ArrayList<PacotesDeViagens> tipoDeServicoOfertado = new ArrayList<>();
-    private Financeiro financeiro;
-    private PacotesDeViagens PacotesDeViagens;
+    private Financeiro financeiro = new Financeiro();
+    private Pacote pacote;
     private Cliente cliente;
 
-    public Agencia (String nma, String cnpj , String lda){
-        this.setNomeAgencia(nma);
-        this.setCnpjAgencia(cnpj);
-        this.setLocalDaAgencia(lda);
+    public String getNomeAgencia() {
+        return nomeAgencia;
     }
-    public String getNomeAgencia() { return this.nomeAgencia; }
-    public void setNomeAgencia(String nma) { this.nomeAgencia = nma; }
-    public String getCnpjAgencia() { return this.cnpjAgencia; }
-    public void setCnpjAgencia(String cnpj) { this.cnpjAgencia = cnpj; }
-    public String getLocalDaAgencia() { return this.localDaAgencia; }
-    public void setLocalDaAgencia(String lda) { this.localDaAgencia = lda; }
+
+    public void setNomeAgencia(String nomeAgencia) {
+        this.nomeAgencia = nomeAgencia;
+    }
+
+    public String getCnpjAgencia() {
+        return cnpjAgencia;
+    }
+
+    public void setCnpjAgencia(String cnpjAgencia) {
+        this.cnpjAgencia = cnpjAgencia;
+    }
+
+    public String getLocalDaAgencia() {
+        return localDaAgencia;
+    }
+
+    public void setLocalDaAgencia(String localDaAgencia) {
+        this.localDaAgencia = localDaAgencia;
+    }
+
+
+    public Financeiro getFinanceiro() {
+        return financeiro;
+    }
+
+    public void setFinanceiro(Financeiro financeiro) {
+        this.financeiro = financeiro;
+    }
+
+    public Pacote getPacote() {
+        return pacote;
+    }
+
+    public void setPacote(Pacote pacote) {
+        this.pacote = pacote;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Agencia(String nomeAgencia, String cnpjAgencia, String localDaAgencia, Cliente cliente, Financeiro financeiro, Pacote pacote) {
+        setNomeAgencia(nomeAgencia);
+        setCnpjAgencia(cnpjAgencia);
+        setLocalDaAgencia(localDaAgencia);
+        setFinanceiro(financeiro);
+        setPacote(pacote);
+        setCliente(cliente);
+    }
+    @Override
+    public void escolhaDeServico() {
+
+    }
+
+    @Override
+    public void adicionarPacote() {
+
+    }
+
+    @Override
+    public void alterarPacote() {
+
+    }
+
+    @Override
+    public void excluirPacote() {
+
+    }
+
+    @Override
+    public void consultarPacote() {
+
+    }
 }

@@ -48,12 +48,11 @@ abstract class Pessoa {
     }
 
     public Pessoa(String nome, String sobrenome, String cpf, String sexo) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.cpf = cpf;
-        this.sexo = sexo;
+        setNome(nome);
+        setSobrenome(sobrenome);
+        setCpf(cpf);
+        setSexo(sexo);
     };
-
 
     private void birthdaySet(int ano, int mes, int dia) {
         LocalDate today = LocalDate.now();
