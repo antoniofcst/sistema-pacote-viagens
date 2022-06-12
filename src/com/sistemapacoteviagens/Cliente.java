@@ -18,6 +18,30 @@ public class Cliente extends Pessoa {
         this.telefone = telefone;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public ArrayList<Pacote> getPacoteDoCliente() {
+        return this.pacoteDoCliente;
+    }
+
+    public void setPacoteDoCliente(ArrayList<Pacote> pacoteDoCliente) {
+        this.pacoteDoCliente = pacoteDoCliente;
+    }
+
     public Cliente(String nome, String sobrenome, String cpf, String sexo, String endereco, int telefone, String email) {
         super(nome, sobrenome, cpf, sexo);
         setEndereco(endereco);
