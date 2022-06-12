@@ -1,9 +1,8 @@
 package src.com.sistemapacoteviagens;
 
 public interface AgenciaInterface {
-    public void escolhaDeServico();
-    public void adicionarPacote();
-    public void alterarPacote();
-    public void excluirPacote();
-    public void consultarPacote();
+    abstract public void ComprarPacote();
+    abstract public void alterarPacote();
+    abstract public void excluirPacote();
+    abstract public void consultarPacote();
 }

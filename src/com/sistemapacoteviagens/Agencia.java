@@ -66,13 +66,9 @@ public class Agencia implements AgenciaInterface{
         setPacote(pacote);
         setCliente(cliente);
     }
-    @Override
-    public void escolhaDeServico() {
-
-    }
 
     @Override
-    public void adicionarPacote() {
+    public void ComprarPacote() {
 
     }
 
