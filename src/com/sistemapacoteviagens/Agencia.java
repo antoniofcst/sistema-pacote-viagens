@@ -68,22 +68,22 @@ public class Agencia implements AgenciaInterface{
     }
 
     @Override
-    public void ComprarPacote() {
+    public void ComprarPacote(Pacote pacote, Cliente cliente) {
 
     }
 
     @Override
-    public void alterarPacote() {
+    public void alterarPacote(Pacote pacote, Cliente cliente) {
 
     }
 
     @Override
-    public void excluirPacote() {
+    public void excluirPacote(Cliente cliente) {
 
     }
 
     @Override
-    public void consultarPacote() {
+    public void consultarPacote(Cliente cliente) {
 
     }
 }
