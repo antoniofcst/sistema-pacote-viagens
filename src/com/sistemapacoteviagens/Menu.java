@@ -34,8 +34,9 @@ public class Menu {
     public void Menu2(){
         Scanner scan = new Scanner(System.in);
         do{
-            System.out.println("(1) Cadastrar um novo cliente");
-            System.out.println("(2) Cadastrar uma nova agência");
+            System.out.println("Menu cliente");
+            System.out.println("(1) vizualizar pacotes disponíveis");
+            System.out.println("(2) comprar pacotes");
             System.out.println("(v) voltar");
             System.out.println("(0) sair");
             opcao = scan.nextInt();
