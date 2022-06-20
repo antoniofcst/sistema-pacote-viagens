@@ -26,7 +26,7 @@ public class Financeiro {
                 break;
             default:
                 setFormaDePagamento(null);
-                System.out.println("Nenhuma forma de pagamento cadastrada.");
+                System.out.println("Nenhuma forma de pagamento cadastrada!");
 
         }
     }
