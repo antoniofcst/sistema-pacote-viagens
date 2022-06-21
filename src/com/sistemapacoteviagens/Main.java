@@ -19,6 +19,15 @@ public class Main {
         String endereco;
         String telefone;
         String email;
+
+        String nomeagencia;
+        String cnpjagencia;
+        String localdaagencia;
+        //Cliente cliente;
+        //Financeiro financeiro;
+        //Pacote pacote;
+
+
         Scanner scan = new Scanner(System.in);
         do {
             System.out.println("+====================================================================+");
@@ -44,7 +53,10 @@ public class Main {
                     Cliente c = new Cliente(nome, sobrenome, cpf, sexo, endereco, telefone, email);
                     break;
                 case "2":
-
+                    nomeagencia = scan.next(); System.out.println("Nome:");
+                    if (!nomeagencia.isEmpty()){ System.out.println("CNPJ:" ); }
+                    cnpjagencia = scan.next(); if (!cnpjagencia.isEmpty()){ System.out.println("Local:"); }
+                    localdaagencia = scan.next(); if (!localdaagencia.isEmpty()){ System.out.println("Sexo:"); }
                     break;
                 case "3":
 
