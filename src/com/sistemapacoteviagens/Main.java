@@ -38,9 +38,9 @@ public class Main {
                     sobrenome = scan.next(); if (!sobrenome.isEmpty()){ System.out.println("CPF:"); }
                     cpf = scan.next(); if (!cpf.isEmpty()){ System.out.println("Sexo:"); }
                     sexo =  scan.next(); if (!sexo.isEmpty()){ System.out.println("Endereço"); }
-                    endereco = scan.next(); if (!endereco.isEmpty()){ System.out.println("Endereço:"); }
-                    telefone = scan.next(); if (!telefone.isEmpty()){System.out.println("Telefone:" ); }
-                    System.out.println("E-mail:" );
+                    endereco = scan.next(); if (!endereco.isEmpty()){ System.out.println("telefone:"); }
+                    telefone = scan.next(); if (!telefone.isEmpty()){System.out.println("email:" ); }
+                    email = scan.next();
                     Cliente c = new Cliente(nome, sobrenome, cpf, sexo, endereco, telefone, email);
                     break;
                 case "2":
