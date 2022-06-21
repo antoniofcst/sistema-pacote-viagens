@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Menu {
     public String opcao;
+    public Cliente cliente;
+    public Agencia agencia;
 
     public void Menu1(){
         Scanner scan = new Scanner(System.in);
@@ -36,12 +38,12 @@ public class Menu {
         Scanner scan = new Scanner(System.in);
         do{
             System.out.println("Menu cliente!");
-            System.out.println("Nome:"); System.out.println("Sobrenome:");
-            System.out.println("CPF:");
-            System.out.println("Sexo:");
-            System.out.println("Endereço:");
-            System.out.println("Telefone:");
-            System.out.println("E-mail:");
+            System.out.println("Nome:" + this.cliente.setNome()); System.out.println("Sobrenome:" + this.cliente.setSobrenome());
+            System.out.println("CPF:" + this.cliente.setCpf());
+            System.out.println("Sexo:" + this.cliente.setSexo(););
+            System.out.println("Endereço:" + this.cliente.setEndereco());
+            System.out.println("Telefone:" + this.cliente.getTelefone());
+            System.out.println("E-mail:" + this.cliente.setEmail(););
             System.out.println("(v) voltar");
             System.out.println("(0) sair");
             switch (opcao){
@@ -59,9 +61,9 @@ public class Menu {
         Scanner scan = new Scanner(System.in);
         do{
             System.out.println("Menu empresa!");
-            System.out.println("Nome:");
-            System.out.println("CPJ:");
-            System.out.println("Local:");
+            System.out.println("Nome:" + this.agencia.setNomeAgencia());
+            System.out.println("CPJ:" + this.agencia.setCnpjAgencia());
+            System.out.println("Local:" + this.agencia.setLocalDaAgencia());
             System.out.println("(v) voltar");
             System.out.println("(0) sair");
             switch (opcao){
