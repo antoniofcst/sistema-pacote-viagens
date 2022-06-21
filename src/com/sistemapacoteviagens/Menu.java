@@ -82,7 +82,7 @@ public class Menu {
                     Submenmu_modo_cliente();
                     break;
                 case "2":
-                    Submenmu_cadastrar_empresa();
+                    Submenmu_modo_empresa();
                     break;
                 case "v":
                     Menu1();
@@ -97,14 +97,55 @@ public class Menu {
         do{
             System.out.println("Navegação em modo cliente!");
             System.out.println("(1) Escolha sua agencia de viagens");
-            System.out.println("");
-            System.out.println("Local:");
             System.out.println("(v) voltar");
             System.out.println("(0) sair");
             switch (opcao){
                 case "1":
-                    Menu1();
+                    Submenu_nav_modcliente();
                     break;
+                case "v":
+                    Menu2();
+                default:
+                    System.out.println("Opção inválida!");
+            }
+        }while (opcao != "0");
+    }
+    public void Submenu_nav_modcliente(){
+        Scanner scan = new Scanner(System.in);
+        do {
+            System.out.println("As agencias disponiveis são essas:");
+
+            System.out.println("Digite aqui o nome da agencia escolhida:");
+            System.out.println("(v) voltar");
+            System.out.println("(0) sair");
+            switch (opcao){
+                case "1":
+
+                    break;
+                case "2":
+
+                    break;
+                case "v":
+                    Submenmu_modo_cliente();
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+            }
+        }while (opcao != "0");
+    }
+    public void Submenmu_modo_empresa(){
+        Scanner scan = new Scanner(System.in);
+        do{
+            System.out.println("Navegação em empresa!");
+            System.out.println("(1) Criar pacotes");
+            System.out.println("(v) voltar");
+            System.out.println("(0) sair");
+            switch (opcao){
+                case "1":
+
+                    break;
+                case "v":
+                    Menu2();
                 default:
                     System.out.println("Opção inválida!");
             }
