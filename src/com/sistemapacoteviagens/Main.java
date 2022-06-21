@@ -2,10 +2,10 @@ package src.com.sistemapacoteviagens;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.io.IOException;
 import java.util.Scanner;
-
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, InterruptedException {
         //Cliente marcio = new Cliente("ja", "co", "0479034334","maculino", "ali", 2, "half@gmail.com");
         //Pacote pacote = new Pacote();
         //Agencia agenciaCeara = new Agencia("");
@@ -43,13 +43,9 @@ public class Main {
                     break;
                 default:
                     if (opcao == "0") {
-                        if (System.getProperty("os.name").contains("Windows")) {
-                            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-                        }
-                        else {
-                            Runtime.getRuntime().exec("clear");
-                        }
+                        break;
                     }
+                    System.out.println("Opcao invalida");
             }
         }while (opcao != "0");
 
