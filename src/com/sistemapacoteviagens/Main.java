@@ -13,6 +13,12 @@ public class Main {
 
         String opcao;
         String nome;
+        String sobrenome;
+        String cpf;
+        String sexo;
+        String endereco;
+        int telefone;
+        String email;
         Scanner scan = new Scanner(System.in);
         do {
             System.out.println("+====================================================================+");
@@ -29,11 +35,12 @@ public class Main {
             switch (opcao){
                 case "1":
                     System.out.println("Nome:"); nome = scan.next(); if (!nome.isEmpty()){ System.out.println("Sobrenome:" ); }
-                    System.out.println("CPF:" );
-                    System.out.println("Sexo:" );
+                    System.out.println("CPF:" ); sobrenome = scan.next();
+                    if (!sobrenome.isEmpty()){ System.out.println("Sexo:"); }
                     System.out.println("Endereço:");
                     System.out.println("Telefone:" );
                     System.out.println("E-mail:" );
+                    Cliente c = new Cliente(nome, sobrenome, cpf, sexo, endereco, telefone, email);
                     break;
                 case "2":
 
