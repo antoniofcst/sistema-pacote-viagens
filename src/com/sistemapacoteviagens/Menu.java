@@ -21,11 +21,13 @@ public class Menu {
                 case "2":
                     Submenmu_cadastrar_empresa();
                     break;
-                case "3":
+                case "p":
                     Menu2();
                     break;
                 default:
-                System.out.println("Opção inválida!");
+                    if (opcao != "0" && opcao != "1" && opcao != "2" && opcao != "p") {
+                        System.out.println("Opção inválida!");
+                    }
                 }
         }while (opcao != "0");
 
@@ -47,7 +49,9 @@ public class Menu {
                     Menu1();
                     break;
                 default:
-                System.out.println("Opção inválida!");
+                    if (opcao != "0" && opcao != "v") {
+                        System.out.println("Opção inválida!");
+                    }
             }
         }while (opcao != "0");
     }
@@ -65,7 +69,9 @@ public class Menu {
                     Menu1();
                     break;
                 default:
-                System.out.println("Opção inválida!");
+                    if (opcao != "0" && opcao != "v") {
+                        System.out.println("Opção inválida!");
+                    }
             }
         }while (opcao != "0");
     }
@@ -88,7 +94,9 @@ public class Menu {
                     Menu1();
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    if (opcao != "0" && opcao != "1" && opcao != "2" && opcao != "v") {
+                        System.out.println("Opção inválida!");
+                    }
             }
         }while (opcao != "0");
     }
@@ -106,7 +114,9 @@ public class Menu {
                 case "v":
                     Menu2();
                 default:
-                    System.out.println("Opção inválida!");
+                    if (opcao != "0" && opcao != "1" && opcao != "v") {
+                        System.out.println("Opção inválida!");
+                    }
             }
         }while (opcao != "0");
     }
@@ -129,7 +139,9 @@ public class Menu {
                     Submenmu_modo_cliente();
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    if (opcao != "0" && opcao != "v") {
+                        System.out.println("Opção inválida!");
+                    }
             }
         }while (opcao != "0");
     }
@@ -147,7 +159,9 @@ public class Menu {
                 case "v":
                     Menu2();
                 default:
-                    System.out.println("Opção inválida!");
+                    if (opcao != "0" && opcao != "1" && opcao != "v") {
+                        System.out.println("Opção inválida!");
+                    }
             }
         }while (opcao != "0");
     }
