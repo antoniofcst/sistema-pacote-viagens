@@ -22,10 +22,12 @@ public class Menu {
                     Submenmu_cadastrar_empresa();
                     break;
                 case "3":
-                    //Menu2();
+                    Menu2();
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    if (opcao != "0") {
+                        System.out.println("Opção inválida!");
+                    }
             }
         }while (opcao != "0");
 
@@ -47,7 +49,9 @@ public class Menu {
                     Menu1();
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    if (opcao != "0") {
+                        System.out.println("Opção inválida!");
+                    }
             }
         }while (opcao != "0");
     }
@@ -65,9 +69,37 @@ public class Menu {
                     Menu1();
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    if (opcao != "0") {
+                        System.out.println("Opção inválida!");
+                    }
             }
         }while (opcao != "0");
+    }
+    public void Menu2(){
+        Scanner scan = new Scanner(System.in);
+        do {
+            System.out.println("Escolha o seu modo de navegação");
+            System.out.println("(1) Acessar como cliente");
+            System.out.println("(2) Acessar como uma empresa");
+            System.out.println("(v) voltar");
+            System.out.println("(0) sair");
+            switch (opcao){
+                case "1":
+                    Submenu_cadastrar_cliente();
+                    break;
+                case "2":
+                    Submenmu_cadastrar_empresa();
+                    break;
+                case "v":
+                    Menu1();
+                    break;
+                default:
+                    if (opcao != "0") {
+                        System.out.println("Opção inválida!");
+                    }
+            }
+        }while (opcao != "0");
+
     }
 }
 
