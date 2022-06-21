@@ -14,33 +14,60 @@ public class Menu {
             System.out.println("(2) Cadastrar uma nova agência");
             System.out.println("(p) próximo");
             System.out.println("(0) sair");
-            opcao = scan.nextInt();
             switch (opcao){
                 case "1":
-                public Cliente(); //Chamar o método ou o construtor do cliente
+                    Submenu_cadastrar_cliente();
                     break;
                 case "2":
-                public Agencia(); //Chamar o método ou o construtor da agência
+                    Submenmu_cadastrar_empresa();
                     break;
                 case "3":
-                    Menu2();
+                    //Menu2();
                     break;
                 default:
                     System.out.println("Opção inválida!");
             }
-        }while (opcao != 0);
+        }while (opcao != "0");
 
     }
-    public void Menu2(){
+    public void Submenu_cadastrar_cliente(){
         Scanner scan = new Scanner(System.in);
         do{
             System.out.println("Menu cliente");
-            System.out.println("(1) vizualizar pacotes disponíveis");
-            System.out.println("(2) comprar pacotes");
+            System.out.println("Nome:"); System.out.println("Sobrenome:");
+            System.out.println("CPF:");
+            System.out.println("Sexo:");
+            System.out.println("Endereço:");
+            System.out.println("Telefone:");
+            System.out.println("E-mail:");
             System.out.println("(v) voltar");
             System.out.println("(0) sair");
-            opcao = scan.nextInt();
-        }while (opcao != 0);
+            switch (opcao){
+                case "v":
+                    Menu1();
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+            }
+        }while (opcao != "0");
+    }
+    public void Submenmu_cadastrar_empresa(){
+        Scanner scan = new Scanner(System.in);
+        do{
+            System.out.println("Menu empresa");
+            System.out.println("Nome:");
+            System.out.println("CPJ:");
+            System.out.println("Local:");
+            System.out.println("(v) voltar");
+            System.out.println("(0) sair");
+            switch (opcao){
+                case "v":
+                    Menu1();
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+            }
+        }while (opcao != "0");
     }
 }
 
