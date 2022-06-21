@@ -26,4 +26,12 @@ public class Pacote {
         setListaDeCidades(listaDeCidades); // provavelmente isso ta errado
         setPrecoDoPacote(precoDoPacote);
     }
+
+    @Override
+    public String toString() {
+        return "Pacote{" +
+                "listaDeCidades=" + listaDeCidades +
+                ", precoDoPacote=" + precoDoPacote +
+                '}';
+    }
 }

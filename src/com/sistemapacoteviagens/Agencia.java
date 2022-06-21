@@ -77,11 +77,41 @@ public class Agencia implements AgenciaInterface{
     }
 
     @Override
+    public void ComprarPacote() {
+
+    }
+
+    @Override
+    public void alterarPacote() {
+
+    }
+
+    @Override
+    public void excluirPacote() {
+
+    }
+
+    @Override
+    public void consultarPacote() {
+
+    }
+
+    @Override
     public void ComprarPacote(Pacote pacote, Cliente cliente, String FormaDePagamento) {
         cliente.getPacoteDoCliente().add(pacote);
         getFinanceiro().choosePayment(FormaDePagamento);
         setSaldoAgencia(pacote.getPrecoDoPacote());
         System.out.println(cliente.getNome() + ", seu pacote foi comprado!");
+    }
+
+    @Override
+    public void alterarPacote(Pacote pacote, Cliente cliente) {
+
+    }
+
+    @Override
+    public void excluirPacote(Cliente cliente) {
+
     }
 
     @Override
@@ -103,5 +133,18 @@ public class Agencia implements AgenciaInterface{
     @Override
     public void consultarPacote(Cliente cliente) {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Agencia{" +
+                "nomeAgencia='" + nomeAgencia + '\'' +
+                ", cnpjAgencia='" + cnpjAgencia + '\'' +
+                ", localDaAgencia='" + localDaAgencia + '\'' +
+                ", financeiro=" + financeiro +
+                ", saldoAgencia=" + saldoAgencia +
+                ", pacote=" + pacote +
+                ", cliente=" + cliente +
+                '}';
     }
 }

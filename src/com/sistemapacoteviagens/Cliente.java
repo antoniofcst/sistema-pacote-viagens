@@ -49,5 +49,18 @@ public class Cliente extends Pessoa {
         setEmail(email);
     }
 
-
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "Nome:" + getNome() +'\''+
+                ", sobrenome:" + getSobrenome() +'\''+
+                ", CPF:" + getCpf() +'\''+
+                ", Sexo:" + getSexo() +'\''+
+                ", endereco:" + getEndereco() +'\''+
+                ", telefone:" + telefone +
+                ", email:'" + email + '\'' +
+                ", endereco:'" + endereco + '\'' +
+                ", pacoteDoCliente:" + pacoteDoCliente +
+                '}';
+    }
 }

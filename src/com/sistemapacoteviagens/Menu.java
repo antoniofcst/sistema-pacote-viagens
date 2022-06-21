@@ -1,6 +1,6 @@
 package src.com.sistemapacoteviagens;
 
-//import java.util.Scanner; talvez nao seja necessario, deixar ai por enquanto
+import java.util.Scanner;
 
 public class Menu {
     public String opcao;
@@ -8,10 +8,12 @@ public class Menu {
     public Agencia agencia;
 
     public void Menu1(){
-        //Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         do {
-            System.out.println("Bem vindo!");
+            System.out.println("+====================================================================+");
+            System.out.println("                       !!!Bem vindo!!!                                ");
             System.out.println("Para nevegar no menu basta digitar o numero que corresponde à escolha!");
+            System.out.println("+====================================================================+");
             System.out.println("(1) Cadastrar um novo cliente");
             System.out.println("(2) Cadastrar uma nova agência");
             System.out.println("(p) próximo");
@@ -35,15 +37,23 @@ public class Menu {
 
     }
     public void Submenu_cadastrar_cliente(){
-        //Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
+        String nome;
+        String sobrenome;
+        String cpf;
+        String endereco;
+        int telefone;
+        String email;
         do{
-            System.out.println("Menu cliente!");
-            System.out.println("Nome:" + this.cliente.setNome()); System.out.println("Sobrenome:" + this.cliente.setSobrenome());
-            System.out.println("CPF:" + this.cliente.setCpf());
-            System.out.println("Sexo:" + this.cliente.setSexo());
-            System.out.println("Endereço:" + this.cliente.setEndereco());
-            System.out.println("Telefone:" + this.cliente.getTelefone());
-            System.out.println("E-mail:" + this.cliente.setEmail());
+            System.out.println("+====================================================================+");
+            System.out.println("                       !!!Menu cliente!!!                             ");
+            System.out.println("+====================================================================+");
+            System.out.println("Nome:"); nome = scan.next(); if (!nome.isEmpty()){ System.out.println("Sobrenome:" ); }
+            System.out.println("CPF:" );
+            System.out.println("Sexo:" );
+            System.out.println("Endereço:");
+            System.out.println("Telefone:" );
+            System.out.println("E-mail:" );
             System.out.println("(v) voltar");
             System.out.println("(0) sair");
             switch (opcao){
@@ -60,11 +70,13 @@ public class Menu {
     public void Submenmu_cadastrar_empresa(){
         //Scanner scan = new Scanner(System.in);
         do{
-            System.out.println("Menu empresa!");
-            System.out.println("Nome:" + this.agencia.setNomeAgencia());
-            System.out.println("CPJ:" + this.agencia.setCnpjAgencia());
-            System.out.println("Local:" + this.agencia.setLocalDaAgencia());
-            System.out.println("(v) voltar");
+            System.out.println("+====================================================================+");
+            System.out.println("                       !!!Menu empresa!!!                             ");
+//            System.out.println("+====================================================================+");
+//            System.out.println("Nome:" + this.agencia.setNomeAgencia());
+//            System.out.println("CPJ:" + this.agencia.setCnpjAgencia());
+//            System.out.println("Local:" + this.agencia.setLocalDaAgencia());
+//            System.out.println("(v) voltar");
             System.out.println("(0) sair");
             switch (opcao){
                 case "v":

@@ -46,4 +46,13 @@ public class Cidade {
         setAtracoes(atracoes);
     }
 
+    @Override
+    public String toString() {
+        return "Cidade{" +
+                "nomeDaCidade='" + nomeDaCidade + '\'' +
+                ", estadoDaCidade='" + estadoDaCidade + '\'' +
+                ", paisDaCidade='" + paisDaCidade + '\'' +
+                ", atracoes=" + atracoes +
+                '}';
+    }
 }
