@@ -1,6 +1,6 @@
 package src.com.sistemapacoteviagens;
 
-import java.util.Scanner;
+//import java.util.Scanner; talvez nao seja necessario, deixar ai por enquanto
 
 public class Menu {
     public String opcao;
@@ -8,7 +8,7 @@ public class Menu {
     public Agencia agencia;
 
     public void Menu1(){
-        Scanner scan = new Scanner(System.in);
+        //Scanner scan = new Scanner(System.in);
         do {
             System.out.println("Bem vindo!");
             System.out.println("Para nevegar no menu basta digitar o numero que corresponde à escolha!");
@@ -35,15 +35,15 @@ public class Menu {
 
     }
     public void Submenu_cadastrar_cliente(){
-        Scanner scan = new Scanner(System.in);
+        //Scanner scan = new Scanner(System.in);
         do{
             System.out.println("Menu cliente!");
             System.out.println("Nome:" + this.cliente.setNome()); System.out.println("Sobrenome:" + this.cliente.setSobrenome());
             System.out.println("CPF:" + this.cliente.setCpf());
-            System.out.println("Sexo:" + this.cliente.setSexo(););
+            System.out.println("Sexo:" + this.cliente.setSexo());
             System.out.println("Endereço:" + this.cliente.setEndereco());
             System.out.println("Telefone:" + this.cliente.getTelefone());
-            System.out.println("E-mail:" + this.cliente.setEmail(););
+            System.out.println("E-mail:" + this.cliente.setEmail());
             System.out.println("(v) voltar");
             System.out.println("(0) sair");
             switch (opcao){
@@ -58,7 +58,7 @@ public class Menu {
         }while (opcao != "0");
     }
     public void Submenmu_cadastrar_empresa(){
-        Scanner scan = new Scanner(System.in);
+        //Scanner scan = new Scanner(System.in);
         do{
             System.out.println("Menu empresa!");
             System.out.println("Nome:" + this.agencia.setNomeAgencia());
@@ -78,7 +78,7 @@ public class Menu {
         }while (opcao != "0");
     }
     public void Menu2(){
-        Scanner scan = new Scanner(System.in);
+        //Scanner scan = new Scanner(System.in);
         do {
             System.out.println("Escolha o seu modo de navegação!");
             System.out.println("(1) Acessar como cliente");
@@ -103,7 +103,7 @@ public class Menu {
         }while (opcao != "0");
     }
     public void Submenmu_modo_cliente(){
-        Scanner scan = new Scanner(System.in);
+        //Scanner scan = new Scanner(System.in);
         do{
             System.out.println("Navegação em modo cliente!");
             System.out.println("(1) Escolha sua agencia de viagens");
@@ -123,7 +123,7 @@ public class Menu {
         }while (opcao != "0");
     }
     public void Submenu_nav_modcliente(){
-        Scanner scan = new Scanner(System.in);
+        //Scanner scan = new Scanner(System.in);
         do {
             System.out.println("As agencias disponiveis são essas:");
 
@@ -149,7 +149,7 @@ public class Menu {
         }while (opcao != "0");
     }
     public void Submenmu_modo_empresa(){
-        Scanner scan = new Scanner(System.in);
+        //Scanner scan = new Scanner(System.in);
         do{
             System.out.println("Navegação em empresa!");
             System.out.println("(1) Criar pacotes");
