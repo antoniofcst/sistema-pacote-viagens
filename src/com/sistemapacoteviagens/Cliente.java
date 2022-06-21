@@ -5,16 +5,16 @@ import src.com.sistemapacoteviagens.Pessoa;
 import java.util.ArrayList;
 
 public class Cliente extends Pessoa {
-    private int telefone;
+    private String telefone;
     private String email;
     private String endereco;
     private ArrayList<Pacote> pacoteDoCliente = new ArrayList<>();
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
@@ -42,7 +42,7 @@ public class Cliente extends Pessoa {
         this.pacoteDoCliente = pacoteDoCliente;
     }
 
-    public Cliente(String nome, String sobrenome, String cpf, String sexo, String endereco, int telefone, String email) {
+    public Cliente(String nome, String sobrenome, String cpf, String sexo, String endereco, String telefone, String email) {
         super(nome, sobrenome, cpf, sexo);
         setEndereco(endereco);
         setTelefone(telefone);

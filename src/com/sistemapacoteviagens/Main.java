@@ -17,7 +17,7 @@ public class Main {
         String cpf;
         String sexo;
         String endereco;
-        int telefone;
+        String telefone;
         String email;
         Scanner scan = new Scanner(System.in);
         do {
@@ -34,11 +34,12 @@ public class Main {
             opcao = scan.next();
             switch (opcao){
                 case "1":
-                    System.out.println("Nome:"); nome = scan.next(); if (!nome.isEmpty()){ System.out.println("Sobrenome:" ); }
-                    System.out.println("CPF:" ); sobrenome = scan.next();
-                    if (!sobrenome.isEmpty()){ System.out.println("Sexo:"); }
-                    System.out.println("Endereço:");
-                    System.out.println("Telefone:" );
+                    nome = scan.next(); System.out.println("Nome:"); if (!nome.isEmpty()){ System.out.println("Sobrenome:" ); }
+                    sobrenome = scan.next(); if (!sobrenome.isEmpty()){ System.out.println("CPF:"); }
+                    cpf = scan.next(); if (!cpf.isEmpty()){ System.out.println("Sexo:"); }
+                    sexo =  scan.next(); if (!sexo.isEmpty()){ System.out.println("Endereço"); }
+                    endereco = scan.next(); if (!endereco.isEmpty()){ System.out.println("Endereço:"); }
+                    telefone = scan.next(); if (!telefone.isEmpty()){System.out.println("Telefone:" ); }
                     System.out.println("E-mail:" );
                     Cliente c = new Cliente(nome, sobrenome, cpf, sexo, endereco, telefone, email);
                     break;
