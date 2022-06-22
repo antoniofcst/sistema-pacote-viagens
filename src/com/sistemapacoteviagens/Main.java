@@ -14,9 +14,7 @@ public class Main {
         ClienteController cc = new ClienteController();
         //cc.salvar(marcio);
         String opcao;
-        String nomeagencia;
-        String cnpjagencia;
-        String localdaagencia;
+
         //Cliente cliente;
         //Financeiro financeiro;
         //Pacote pacote;
@@ -55,10 +53,13 @@ public class Main {
                     cc.salvar(c);
                     break;
                 case "2":
-                    nomeagencia = scan.next(); System.out.println("Nome:");
-                    if (!nomeagencia.isEmpty()){ System.out.println("CNPJ:" ); }
-                    cnpjagencia = scan.next(); if (!cnpjagencia.isEmpty()){ System.out.println("Local:"); }
-                    localdaagencia = scan.next(); if (!localdaagencia.isEmpty()){ System.out.println("Sexo:"); }
+                    System.out.println("Nome:");
+                    String nomeagencia = scan.next();
+                    String cnpjagencia = scan.next();
+                    System.out.println("CNPJ:" );
+                    String localdaagencia = scan.next();
+                    System.out.println("Local:");
+
                     break;
                 case "3":
                     System.out.println(cc);
