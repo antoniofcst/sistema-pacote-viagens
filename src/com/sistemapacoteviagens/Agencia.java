@@ -7,8 +7,9 @@ public class Agencia implements AgenciaInterface{
     private String localDaAgencia;
     private Financeiro financeiro = new Financeiro();
     private ArrayList<Double> saldoAgencia = new ArrayList<Double>();
-    private Pacote pacote;
     private Cliente cliente;
+    private Pacote pacote;
+
 
     public String getNomeAgencia() {
         return nomeAgencia;
@@ -52,6 +53,7 @@ public class Agencia implements AgenciaInterface{
     }
 
     public Cliente getCliente() {
+
         return cliente;
     }
 
@@ -138,13 +140,13 @@ public class Agencia implements AgenciaInterface{
     @Override
     public String toString() {
         return "Agencia{" +
-                "nomeAgencia='" + nomeAgencia + '\'' +
-                ", cnpjAgencia='" + cnpjAgencia + '\'' +
-                ", localDaAgencia='" + localDaAgencia + '\'' +
-                ", financeiro=" + financeiro +
-                ", saldoAgencia=" + saldoAgencia +
-                ", pacote=" + pacote +
-                ", cliente=" + cliente +
+                "nomeAgencia:'" + nomeAgencia + '\'' +
+                ", cnpjAgencia:'" + cnpjAgencia + '\'' +
+                ", localDaAgencia:'" + localDaAgencia + '\'' +
+                ", financeiro:" + financeiro +
+                ", saldoAgencia:" + saldoAgencia +
+                ", pacote:" + pacote +
+                ", cliente:" + cliente +
                 '}';
     }
 }

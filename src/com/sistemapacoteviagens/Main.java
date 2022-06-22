@@ -6,20 +6,18 @@ import java.io.IOException;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
-        Cliente marcio = new Cliente("ja", "co", "0479034334","maculino", "ali", "2", "half@gmail.com");
+        //Cliente marcio = new Cliente("ja", "co", "0479034334","maculino", "ali", "2", "half@gmail.com");
         //System.out.println(marcio);
         //Pacote pacote = new Pacote();
         //Agencia agenciaCeara = new Agencia("");
         //System.out.println(marcio);
         ClienteController cc = new ClienteController();
         //cc.salvar(marcio);
+        AgenciaController ag = new AgenciaController();
+
+
+
         String opcao;
-
-        //Cliente cliente;
-        //Financeiro financeiro;
-        //Pacote pacote;
-
-
         Scanner scan = new Scanner(System.in);
         do {
             System.out.println("+====================================================================+");
@@ -30,7 +28,6 @@ public class Main {
             System.out.println("(2) Cadastrar uma nova agência");
             System.out.println("(3) Acessar como cliente");
             System.out.println("(4) Acessar como uma empresa");
-
             System.out.println("(0) sair");
             opcao = scan.next();
             switch (opcao){
@@ -54,12 +51,16 @@ public class Main {
                     break;
                 case "2":
                     System.out.println("Nome:");
-                    String nomeagencia = scan.next();
-                    String cnpjagencia = scan.next();
+                    String nomeag = scan.next();
                     System.out.println("CNPJ:" );
-                    String localdaagencia = scan.next();
+                    String cnpjag = scan.next();
                     System.out.println("Local:");
+                    String localag = scan.next();
+                    Financeiro financeiroDaAgenciaNova = new Financeiro();
+                    // menu de pácote
 
+                    Agencia a = new Agencia(nomeag, cnpjag, localag, c,  financeiroDaAgenciaNova, ); // metodo para alocar cliente na agencia
+                    ag.salvar(a);
                     break;
                 case "3":
                     System.out.println(cc);

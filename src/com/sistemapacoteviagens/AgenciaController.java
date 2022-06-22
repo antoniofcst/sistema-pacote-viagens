@@ -2,7 +2,7 @@ package src.com.sistemapacoteviagens;
 
 import java.util.ArrayList;
 
-public class AgenciaController {
+ public class AgenciaController {
     private ArrayList<Agencia> agencias = new ArrayList<>();
     public void salvar(Agencia agencia){
         agencias.add(agencia);
