@@ -9,7 +9,7 @@ public class PacoteController {
     }
     public void excluir(Pacote pacote){
         for (int i = 0; i < pacotes.size(); i++){
-            if (pacotes.get(i).Pacote() == pacote){
+            if (pacotes.get(i) == pacote){
                 pacotes.remove(i);
             }
         }
