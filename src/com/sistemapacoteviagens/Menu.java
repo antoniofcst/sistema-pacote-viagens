@@ -7,10 +7,9 @@ public class Menu {
     public Cliente cliente;
     public Agencia agencia;
 
-    public void Menu1(){
+    public void MenuPrincipal(){
         ClienteController cc = new ClienteController();
         AgenciaController ag = new AgenciaController();
-        String opcao;
         Scanner scan = new Scanner(System.in);
         do {
             System.out.println("+====================================================================+");
@@ -52,7 +51,7 @@ public class Menu {
                     Financeiro FinanceirodaAgenciaNova = new Financeiro();
                     Pacote PacotedaAgencianova = new Pacote();
                     // menu de pácote
-                    Agencia a = new Agencia(nomeag, cnpjag, localag, c, FinanceirodaAgenciaNova, PacotedaAgencianova); // metodo para alocar cliente na agencia
+                    Agencia a = new Agencia(nomeag, cnpjag, localag, c ,FinanceirodaAgenciaNova, PacotedaAgencianova); // metodo para alocar cliente na agencia
                     ag.salvar(a);
                     break;
                 case "3":
@@ -69,33 +68,7 @@ public class Menu {
             }
         }while (opcao != "0");
     }
-    /*public void Menu2(){
-        //Scanner scan = new Scanner(System.in);
-        do {
-            System.out.println("Escolha o seu modo de navegação!");
-            System.out.println("(1) Acessar como cliente");
-            System.out.println("(2) Acessar como uma empresa");
-            System.out.println("(v) voltar");
-            System.out.println("(0) sair");
-            switch (opcao){
-                case "1":
-                    Submenmu_modo_cliente();
-                    break;
-                case "2":
-                    Submenmu_modo_empresa();
-                    break;
-                case "v":
-                    Menu1();
-                    break;
-                default:
-                    if (opcao != "0" && opcao != "1" && opcao != "2" && opcao != "v") {
-                        System.out.println("Opção inválida!");
-                    }
-            }
-        }while (opcao != "0");
-    }*/
     public void Submenu_modo_cliente(){
-        String opcao;
         Scanner scan = new Scanner(System.in);
         do{
             System.out.println("+====================================================================+");
@@ -103,6 +76,7 @@ public class Menu {
             System.out.println("+====================================================================+");
             System.out.println("(1) Listar agencias de viagens");
             System.out.println("(2) Escolha seu pacote de viagens");
+            System.out.println("(v) voltar");
             System.out.println("(0) sair");
             opcao = scan.next();
             switch (opcao){
@@ -111,6 +85,10 @@ public class Menu {
                     break;
                 case "2":
 
+                    break;
+                case "3":
+                    MenuPrincipal();
+                    break;
                 default:
                     if (opcao != "0" && opcao != "1" && opcao != "v") {
                         System.out.println("Opção inválida!");
@@ -122,7 +100,9 @@ public class Menu {
     public void Submenu_modo_empresa(){
         //Scanner scan = new Scanner(System.in);
         do{
-            System.out.println("Navegação em empresa!");
+            System.out.println("+====================================================================+");
+            System.out.println("                !!!Navegação em modo empresa!!!                       ");
+            System.out.println("+====================================================================+");
             System.out.println("(1) Criar pacotes");
             System.out.println("(v) voltar");
             System.out.println("(0) sair");
@@ -131,7 +111,7 @@ public class Menu {
 
                     break;
                 case "v":
-                    Menu2();
+                    MenuPrincipal();
                 default:
                     if (opcao != "0" && opcao != "1" && opcao != "v") {
                         System.out.println("Opção inválida!");
