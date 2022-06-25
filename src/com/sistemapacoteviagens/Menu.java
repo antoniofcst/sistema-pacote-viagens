@@ -8,88 +8,68 @@ public class Menu {
     public Agencia agencia;
 
     public void Menu1(){
+        ClienteController cc = new ClienteController();
+        AgenciaController ag = new AgenciaController();
+        String opcao;
         Scanner scan = new Scanner(System.in);
         do {
             System.out.println("+====================================================================+");
             System.out.println("                       !!!Bem vindo!!!                                ");
-            System.out.println("Para nevegar no menu basta digitar o numero que corresponde à escolha!");
+            System.out.println("Para navegar no menu basta digitar o número que corresponde à escolha!");
             System.out.println("+====================================================================+");
             System.out.println("(1) Cadastrar um novo cliente");
             System.out.println("(2) Cadastrar uma nova agência");
-            System.out.println("(p) próximo");
+            System.out.println("(3) Acessar como cliente");
+            System.out.println("(4) Acessar como uma empresa");
             System.out.println("(0) sair");
+            opcao = scan.next();
             switch (opcao){
                 case "1":
-                    Submenu_cadastrar_cliente();
+                    System.out.println("Nome:");
+                    String nome = scan.next();
+                    System.out.println("Sobrenome:");
+                    String sobrenome = scan.next();
+                    System.out.println("CPF:");
+                    String cpf = scan.next();
+                    System.out.println("Sexo:");
+                    String sexo =  scan.next();
+                    System.out.println("Endereço");
+                    String endereco = scan.next();
+                    System.out.println("telefone:");
+                    String telefone = scan.next();
+                    System.out.println("email:" );
+                    String email = scan.next();
+                    Cliente c = new Cliente(nome, sobrenome, cpf, sexo, endereco, telefone, email);
+                    cc.salvar(c);
                     break;
                 case "2":
-                    Submenmu_cadastrar_empresa();
+                    System.out.println("Nome:");
+                    String nomeag = scan.next();
+                    System.out.println("CNPJ:" );
+                    String cnpjag = scan.next();
+                    System.out.println("Local:");
+                    String localag = scan.next();
+                    Financeiro FinanceirodaAgenciaNova = new Financeiro();
+                    Pacote PacotedaAgencianova = new Pacote();
+                    // menu de pácote
+                    Agencia a = new Agencia(nomeag, cnpjag, localag, c, FinanceirodaAgenciaNova, PacotedaAgencianova); // metodo para alocar cliente na agencia
+                    ag.salvar(a);
                     break;
-                case "p":
-                    Menu2();
+                case "3":
+                    Submenu_modo_cliente();
                     break;
-                default:
-                    if (opcao != "0" && opcao != "1" && opcao != "2" && opcao != "p") {
-                        System.out.println("Opção inválida!");
-                    }
-                }
-        }while (opcao != "0");
-
-    }
-    public void Submenu_cadastrar_cliente(){
-        Scanner scan = new Scanner(System.in);
-        String nome;
-        String sobrenome;
-        String cpf;
-        String endereco;
-        int telefone;
-        String email;
-        do{
-            System.out.println("+====================================================================+");
-            System.out.println("                       !!!Menu cliente!!!                             ");
-            System.out.println("+====================================================================+");
-            System.out.println("Nome:"); nome = scan.next(); if (!nome.isEmpty()){ System.out.println("Sobrenome:" ); }
-            System.out.println("CPF:" );
-            System.out.println("Sexo:" );
-            System.out.println("Endereço:");
-            System.out.println("Telefone:" );
-            System.out.println("E-mail:" );
-            System.out.println("(v) voltar");
-            System.out.println("(0) sair");
-            switch (opcao){
-                case "v":
-                    Menu1();
+                case "4":
+                    Submenu_modo_empresa();
                     break;
                 default:
-                    if (opcao != "0" && opcao != "v") {
-                        System.out.println("Opção inválida!");
+                    if (opcao == "0") {
+                        break;
                     }
+                    System.out.println("Opcao invalida");
             }
         }while (opcao != "0");
     }
-    public void Submenmu_cadastrar_empresa(){
-        //Scanner scan = new Scanner(System.in);
-        do{
-            System.out.println("+====================================================================+");
-            System.out.println("                       !!!Menu empresa!!!                             ");
-//            System.out.println("+====================================================================+");
-//            System.out.println("Nome:" + this.agencia.setNomeAgencia());
-//            System.out.println("CPJ:" + this.agencia.setCnpjAgencia());
-//            System.out.println("Local:" + this.agencia.setLocalDaAgencia());
-//            System.out.println("(v) voltar");
-            System.out.println("(0) sair");
-            switch (opcao){
-                case "v":
-                    Menu1();
-                    break;
-                default:
-                    if (opcao != "0" && opcao != "v") {
-                        System.out.println("Opção inválida!");
-                    }
-            }
-        }while (opcao != "0");
-    }
-    public void Menu2(){
+    /*public void Menu2(){
         //Scanner scan = new Scanner(System.in);
         do {
             System.out.println("Escolha o seu modo de navegação!");
@@ -113,20 +93,24 @@ public class Menu {
                     }
             }
         }while (opcao != "0");
-    }
-    public void Submenmu_modo_cliente(){
-        //Scanner scan = new Scanner(System.in);
+    }*/
+    public void Submenu_modo_cliente(){
+        String opcao;
+        Scanner scan = new Scanner(System.in);
         do{
-            System.out.println("Navegação em modo cliente!");
-            System.out.println("(1) Escolha sua agencia de viagens");
-            System.out.println("(v) voltar");
+            System.out.println("+====================================================================+");
+            System.out.println("                  !!!Navegação em modo cliente!!!                     ");
+            System.out.println("+====================================================================+");
+            System.out.println("(1) Listar agencias de viagens");
+            System.out.println("(2) Escolha seu pacote de viagens");
             System.out.println("(0) sair");
+            opcao = scan.next();
             switch (opcao){
                 case "1":
-                    Submenu_nav_modcliente();
+
                     break;
-                case "v":
-                    Menu2();
+                case "2":
+
                 default:
                     if (opcao != "0" && opcao != "1" && opcao != "v") {
                         System.out.println("Opção inválida!");
@@ -134,33 +118,8 @@ public class Menu {
             }
         }while (opcao != "0");
     }
-    public void Submenu_nav_modcliente(){
-        //Scanner scan = new Scanner(System.in);
-        do {
-            System.out.println("As agencias disponiveis são essas:");
 
-            System.out.println("Digite aqui o nome da agencia escolhida:");
-
-            System.out.println("(v) voltar");
-            System.out.println("(0) sair");
-            switch (opcao){
-                case "1":
-
-                    break;
-                case "2":
-
-                    break;
-                case "v":
-                    Submenmu_modo_cliente();
-                    break;
-                default:
-                    if (opcao != "0" && opcao != "v") {
-                        System.out.println("Opção inválida!");
-                    }
-            }
-        }while (opcao != "0");
-    }
-    public void Submenmu_modo_empresa(){
+    public void Submenu_modo_empresa(){
         //Scanner scan = new Scanner(System.in);
         do{
             System.out.println("Navegação em empresa!");
