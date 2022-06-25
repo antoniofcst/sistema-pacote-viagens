@@ -50,7 +50,6 @@ public class Menu {
                     String localag = scan.next();
                     Financeiro FinanceirodaAgenciaNova = new Financeiro();
                     Pacote PacotedaAgencianova = new Pacote();
-                    // menu de pácote
                     Agencia a = new Agencia(nomeag, cnpjag, localag, c ,FinanceirodaAgenciaNova, PacotedaAgencianova); // metodo para alocar cliente na agencia
                     ag.salvar(a);
                     break;
@@ -69,6 +68,8 @@ public class Menu {
         }while (opcao != "0");
     }
     public void Submenu_modo_cliente(){
+        AgenciaController ag = new AgenciaController();
+        PacoteController pack = new PacoteController();
         Scanner scan = new Scanner(System.in);
         do{
             System.out.println("+====================================================================+");
@@ -81,10 +82,10 @@ public class Menu {
             opcao = scan.next();
             switch (opcao){
                 case "1":
-
+                    System.out.println(ag);
                     break;
                 case "2":
-
+                    pack.salvar(pac);
                     break;
                 case "3":
                     MenuPrincipal();
@@ -98,17 +99,24 @@ public class Menu {
     }
 
     public void Submenu_modo_empresa(){
-        //Scanner scan = new Scanner(System.in);
+        PacoteController pack = new PacoteController();
+        Scanner scan = new Scanner(System.in);
         do{
             System.out.println("+====================================================================+");
             System.out.println("                !!!Navegação em modo empresa!!!                       ");
             System.out.println("+====================================================================+");
             System.out.println("(1) Criar pacotes");
+            System.out.println("(2) Excluir pacotes");
             System.out.println("(v) voltar");
             System.out.println("(0) sair");
+            opcao = scan.next();
             switch (opcao){
                 case "1":
-
+                    Pacote pac = new Pacote();
+                    pack.salvar(pac);
+                    break;
+                case "1":
+                    pack.excluir(pac);
                     break;
                 case "v":
                     MenuPrincipal();
