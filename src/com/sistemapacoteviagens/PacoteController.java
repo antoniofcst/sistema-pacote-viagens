@@ -7,11 +7,17 @@ public class PacoteController {
     public void salvar(Pacote pacote){
         pacotes.add(pacote);
     }
-    public void excluir(Pacote pacote){
+    public void excluir(Double preco){
         for (int i = 0; i < pacotes.size(); i++){
-            if (pacotes.get(i) == pacote){
+            if (pacotes.get(i).getPrecoDoPacote() == preco){
                 pacotes.remove(i);
             }
         }
+    }
+    @Override
+    public String toString() {
+        return "PacoteController{" +
+                "pacotes=" + pacotes +
+                '}';
     }
 }

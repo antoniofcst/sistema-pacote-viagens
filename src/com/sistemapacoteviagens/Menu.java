@@ -115,7 +115,7 @@ public class Menu {
                     Pacote pac = new Pacote();
                     pack.salvar(pac);
                     break;
-                case "1":
+                case "2":
                     pack.excluir(pac);
                     break;
                 case "v":
