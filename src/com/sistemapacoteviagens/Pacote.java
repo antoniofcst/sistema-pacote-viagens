@@ -20,7 +20,7 @@ public class Pacote {
     public String getNomeDoPacote() { return nomeDoPacote; }
     public void setNomeDoPacote(String nomeDoPacote) { this.nomeDoPacote = nomeDoPacote; }
 
-    public Pacote(ArrayList<Cidade> listaDeCidades, double precoDoPacote) {
+    public Pacote(String nomeDoPacote, ArrayList<Cidade> listaDeCidades, double precoDoPacote) {
         setListaDeCidades(listaDeCidades); // provavelmente isso ta errado
         setPrecoDoPacote(precoDoPacote);
     }
@@ -29,6 +29,7 @@ public class Pacote {
     public String toString() {
         return "Pacote{" +
                 "listaDeCidades=" + listaDeCidades +
+                ", nomeDoPacote=" + nomeDoPacote +
                 ", precoDoPacote=" + precoDoPacote +
                 '}';
     }

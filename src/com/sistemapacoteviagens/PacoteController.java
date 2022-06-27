@@ -7,9 +7,9 @@ public class PacoteController {
     public void salvar(Pacote pacote){
         pacotes.add(pacote);
     }
-    public void excluir(Double preco){
+    public void excluir(String nomeDoPacote){
         for (int i = 0; i < pacotes.size(); i++){
-            if (pacotes.get(i).getPrecoDoPacote() == preco){
+            if (pacotes.get(i).getNomeDoPacote() == nomeDoPacote){
                 pacotes.remove(i);
             }
         }

@@ -1,5 +1,7 @@
 package src.com.sistemapacoteviagens;
 
+import java.awt.geom.Arc2D;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
@@ -112,7 +114,12 @@ public class Menu {
             opcao = scan.next();
             switch (opcao){
                 case "1":
-                    Pacote pac = new Pacote();
+                    System.out.println("Nome do Pacote:");
+                    String nomePack = scan.next();
+                    ArrayList<Cidade> listaDeCidades = new ArrayList<>();
+                    System.out.println("Preço do Pacote:");
+                    Double precoPack = scan.nextDouble();
+                    Pacote pac = new Pacote(nomePack, listaDeCidades, precoPack);
                     pack.salvar(pac);
                     break;
                 case "2":
