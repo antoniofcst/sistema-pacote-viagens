@@ -7,7 +7,8 @@ public class Agencia implements AgenciaInterface{
     private String localDaAgencia;
     private Financeiro financeiro = new Financeiro();
     private ArrayList<Double> saldoAgencia = new ArrayList<Double>();
-    private Cliente cliente;
+
+    private ArrayList<Cliente> cliente = new ArrayList<>();
     private Pacote pacote;
 
 
@@ -52,14 +53,9 @@ public class Agencia implements AgenciaInterface{
         this.pacote = pacote;
     }
 
-    public Cliente getCliente() {
+    public ArrayList<Cliente> getCloente() { return cliente; }
 
-        return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
+    public void setCliente(ArrayList<Cliente> clente) { this.cliente = clente; }
 
     public ArrayList<Double> getSaldoAgencia() {
         return saldoAgencia;
@@ -69,7 +65,7 @@ public class Agencia implements AgenciaInterface{
         this.saldoAgencia.add(precoDoPacote);
     }
 
-    public Agencia(String nomeAgencia, String cnpjAgencia, String localDaAgencia, Cliente cliente, Financeiro financeiro, Pacote pacote) {
+    public Agencia(String nomeAgencia, String cnpjAgencia, String localDaAgencia, ArrayList<Cliente> cliente, Financeiro financeiro, Pacote pacote) {
         setNomeAgencia(nomeAgencia);
         setCnpjAgencia(cnpjAgencia);
         setLocalDaAgencia(localDaAgencia);
