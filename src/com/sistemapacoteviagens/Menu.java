@@ -50,9 +50,10 @@ public class Menu {
                     String cnpjag = scan.next();
                     System.out.println("Local:");
                     String localag = scan.next();
+                    ArrayList<Cliente> cliente = new ArrayList<>();
                     Financeiro FinanceirodaAgenciaNova = new Financeiro();
                     Pacote PacotedaAgencianova = new Pacote();
-                    Agencia a = new Agencia(nomeag, cnpjag, localag, c ,FinanceirodaAgenciaNova, PacotedaAgencianova); // metodo para alocar cliente na agencia
+                    Agencia a = new Agencia(nomeag, cnpjag, localag, cliente ,FinanceirodaAgenciaNova, PacotedaAgencianova); // metodo para alocar cliente na agencia
                     ag.salvar(a);
                     break;
                 case "3":
