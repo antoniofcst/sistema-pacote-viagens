@@ -87,7 +87,7 @@ public class Menu {
                     System.out.println(ag);
                     break;
                 case "2":
-                    pack.salvar(pac);
+                    pack.salvar(pack);
                     break;
                 case "3":
                     MenuPrincipal();
