@@ -5,7 +5,7 @@ import javafx.print.PageOrientation;
 import java.util.ArrayList;
 
  public class AgenciaController {
-    private ArrayList<Cliente> clientes = new ArrayList<>();
+    public ArrayList<Cliente> clientes = new ArrayList<>();
     private ArrayList<Agencia> agencias = new ArrayList<>();
     private ArrayList<Pacote> pacotes = new ArrayList<>();
 
@@ -24,6 +24,7 @@ import java.util.ArrayList;
         System.out.println(agencias);
     }
     public void savecltag(Cliente cliente){
+        System.out.println("Cliente salvo");
         clientes.add(cliente);
     }
      public void excltag(String cpf){

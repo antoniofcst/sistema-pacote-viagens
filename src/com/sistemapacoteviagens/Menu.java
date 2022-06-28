@@ -7,9 +7,10 @@ public class Menu {
     public String opcao;
     public Cliente cliente;
     public Agencia agencia;
-
+    AgenciaController ag = new AgenciaController();
+    ClienteController cc = new ClienteController();
+    //PacoteController pac = new PacoteController();
     public void MenuPrincipal(){
-        AgenciaController ag = new AgenciaController();
         Scanner scan = new Scanner(System.in);
         do {
             System.out.println("+====================================================================+");
@@ -67,8 +68,6 @@ public class Menu {
         }while (opcao != "0");
     }
     public void Submenu_modo_cliente(){
-        AgenciaController ag = new AgenciaController();
-        PacoteController pack = new PacoteController();
         Scanner scan = new Scanner(System.in);
         do{
             System.out.println("+====================================================================+");
@@ -109,8 +108,6 @@ public class Menu {
     }
 
     public void Submenu_modo_empresa(){
-        ClienteController cc = new ClienteController();
-        AgenciaController ag = new AgenciaController();
         Scanner scan = new Scanner(System.in);
         do{
             System.out.println("+====================================================================+");
