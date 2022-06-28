@@ -3,38 +3,29 @@ package src.com.sistemapacoteviagens;
 import java.util.ArrayList;
 
 public class PacoteController {
-    private ArrayList<Pacote> pacotes = new ArrayList<>();
-    private ArrayList<Cidade> cidades = new ArrayList<>();
-    private Financeiro financeiro;
-    public void clientsavepack(Pacote pacote){
-        pacotes.add(pacote);
-    }
-    public void clientexcpack(String nomeDoPacote){
-        for (int i = 0; i < pacotes.size(); i++){
-            if (pacotes.get(i).getNomeDoPacote() == nomeDoPacote){
-                pacotes.remove(i);
-            }
-        }
-    }
-    public void clientprintpack(){
-        System.out.println(pacotes);
-    }
-    public void savecitlist(Cidade cidade){
-        cidades.add(cidade);
-    }
-    public void excitlist(String nome){
-        for (int i = 0; i < cidades.size(); i++){
-            if (cidades.get(i).getNomeDaCidade() == nome){
-                cidades.remove(i);
-            }
-        }
-    }
 
+    private String nomeDoCliente;
+    String clientenomepack;
+    String precoDoPack;
+    private ArrayList<String> nomesDoPacotes = new ArrayList<>();
+    public String getClientenomepack() { return clientenomepack; }
+    public void setClientenomepack(String clientenomepack) { this.clientenomepack = clientenomepack; }
+
+    public void comprarpacote(String nomeDoPacote, String nomeDoCliente, String precoDoPack){ nomesDoPacotes.add(nomeDoPacote); }
+    /*public void clientexcpack(String nomeDoPacote){
+        for (int i = 0; i < nomesDoPacotes.size(); i++){
+            if (nomesDoPacotes.get(i).getClientenomepack() == nomeDoPacote){
+                nomesDoPacotes.remove(i);
+            }
+        }
+    }*/
+    public void clientprintpack(){ System.out.println(nomesDoPacotes); }
     @Override
     public String toString() {
         return "PacoteController{" +
-                "pacotes=" + pacotes +
-                "cidades=" + cidades +
+                "pacotes:" + nomesDoPacotes + '\n' +
+                "clientename:" + nomeDoCliente + '\n' +
+                "preço:" + precoDoPack + '\n' +
                 '}';
     }
 }

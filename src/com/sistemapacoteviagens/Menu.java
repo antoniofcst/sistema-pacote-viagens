@@ -8,8 +8,7 @@ public class Menu {
     public Cliente cliente;
     public Agencia agencia;
     AgenciaController ag = new AgenciaController();
-    ClienteController cc = new ClienteController();
-    //PacoteController pac = new PacoteController();
+    PacoteController pack = new PacoteController();
     public void MenuPrincipal(){
         Scanner scan = new Scanner(System.in);
         do {
@@ -60,10 +59,10 @@ public class Menu {
                     Submenu_modo_empresa();
                     break;
                 default:
-                    if (opcao == "0") {
+                    if (opcao == "0" && opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4" && opcao != "v") {
                         break;
                     }
-                    System.out.println("Opcao invalida");
+                    System.out.println("Opcao válida");
             }
         }while (opcao != "0");
     }
@@ -75,10 +74,9 @@ public class Menu {
             System.out.println("+====================================================================+");
             System.out.println("(1) Listar agencias de viagens");
             System.out.println("(2) Escolha seu pacote de viagens");
-            System.out.println("(3) Alterar pacote");
+            System.out.println("(3) Alterar meu pacote");
             System.out.println("(4) Cancelar pacote");
             System.out.println("(v) voltar");
-            System.out.println("(0) sair");
             opcao = scan.next();
             switch (opcao){
                 case "1":
@@ -86,11 +84,21 @@ public class Menu {
                     break;
                 case "2":
                     ag.printpack();
-                    agencia.ComprarPacote();
+                    System.out.println("Digite aqui nome do pacote:");
+                    String nomepack = scan.next();
+                    System.out.println("Digite aqui o seu nome:");
+                    String nomeDoCliente = scan.next();
+                    System.out.println("Digite aqui o preço do pacote a ser comprado:");
+                    String clienteprecopack = scan.next();
+                    pack.comprarpacote(nomepack, nomeDoCliente, clienteprecopack);
+                    System.out.println("!!!PACOTE COMPRADO COM SUCESSO!!!");
                     break;
                 case "3":
+                    System.out.println("Nossos pacotes:");
                     ag.printpack();
-                    agencia.alterarPacote();
+                    System.out.println("Seu pacote atual:");
+                    pack.clientprintpack();
+
                     break;
                 case "4":
                     ag.printcltag();
@@ -100,9 +108,10 @@ public class Menu {
                     MenuPrincipal();
                     break;
                 default:
-                    if (opcao != "0" && opcao != "1" && opcao != "v") {
-                        System.out.println("Opção inválida!");
+                    if (opcao != "0" && opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4" && opcao != "v") {
+                            break;
                     }
+                    System.out.println("Opção válida!");
             }
         }while (opcao != "0");
     }
@@ -118,7 +127,6 @@ public class Menu {
             System.out.println("(3) Listar meus clientes");
             System.out.println("(4) Excluir clientes");
             System.out.println("(v) voltar");
-            System.out.println("(0) sair");
             opcao = scan.next();
             switch (opcao){
                 case "1":
@@ -146,9 +154,10 @@ public class Menu {
                 case "v":
                     MenuPrincipal();
                 default:
-                    if (opcao != "0" && opcao != "1" && opcao != "v") {
-                        System.out.println("Opção inválida!");
+                    if (opcao != "0" && opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4" && opcao != "v") {
+                        break;
                     }
+                    System.out.println("Opção inválida!");
             }
         }while (opcao != "0");
     }
