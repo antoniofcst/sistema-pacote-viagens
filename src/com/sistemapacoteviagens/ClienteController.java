@@ -14,6 +14,10 @@ public class ClienteController {
             }
         }
     }
+
+    public void printclient(){
+        System.out.println(clientes);
+    }
     @Override
     public String toString() {
         return "ClienteController{" +

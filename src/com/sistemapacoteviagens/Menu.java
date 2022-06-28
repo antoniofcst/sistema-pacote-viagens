@@ -109,6 +109,7 @@ public class Menu {
     }
 
     public void Submenu_modo_empresa(){
+        ClienteController cc = new ClienteController();
         AgenciaController ag = new AgenciaController();
         Scanner scan = new Scanner(System.in);
         do{
