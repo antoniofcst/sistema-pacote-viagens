@@ -43,7 +43,7 @@ public class Menu {
                     Cliente c = new Cliente(nome, sobrenome, cpf, sexo, endereco, telefone, email);
                     ag.savecltag(c);
                     break;
-                case "2":
+                /*case "2":
                     System.out.println("Nome:");
                     String nomeag = scan.next();
                     System.out.println("CNPJ:" );
@@ -58,7 +58,7 @@ public class Menu {
                     break;
                 case "3":
                     Submenu_modo_cliente();
-                    break;
+                    break;*/
                 case "4":
                     Submenu_modo_empresa();
                     break;
@@ -88,7 +88,7 @@ public class Menu {
                 case "1":
                     ag.printag();
                     break;
-                case "2":
+                /*case "2":
                     ag.printpack();
                     pack.clientsavepack();
                     break;
@@ -98,7 +98,7 @@ public class Menu {
                     break;
                 case "v":
                     MenuPrincipal();
-                    break;
+                    break;*/
                 default:
                     if (opcao != "0" && opcao != "1" && opcao != "v") {
                         System.out.println("Opção inválida!");
@@ -127,15 +127,14 @@ public class Menu {
                     ArrayList<Cidade> listaDeCidades = new ArrayList<>();
                     System.out.println("Preço do Pacote:");
                     Double precoPack = scan.nextDouble();
-                    Cidade cidade = new Cidade();
+                    //Cidade cidade = new Cidade();
                     Pacote pac = new Pacote(nomePack, listaDeCidades, precoPack);
                     ag.savepackag(pac);
-
+                    break;
                 case "2":
-                    //if (){
                     ag.printpack();
-                    //if (){
-                    ag.excpackag(pac);
+                    int id = scan.nextInt();
+                    ag.excpackag(id);
                     break;
                 case "v":
                     MenuPrincipal();

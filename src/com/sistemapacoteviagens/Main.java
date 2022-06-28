@@ -14,8 +14,8 @@ public class Main {
         //ClienteController cc = new ClienteController();
         //cc.salvar(marcio);
         //AgenciaController ag = new AgenciaController();
-        //Menu menu1 = new Menu();
-        //menu1.MenuPrincipal();
+        Menu menu1 = new Menu();
+        menu1.MenuPrincipal();
 
 
     }

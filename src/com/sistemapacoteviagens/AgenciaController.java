@@ -8,6 +8,7 @@ import java.util.ArrayList;
     private ArrayList<Agencia> agencias = new ArrayList<>();
     private ArrayList<Cliente> clientes = new ArrayList<>();
     private ArrayList<Pacote> pacotes = new ArrayList<>();
+
     public void salvar(Agencia agencia){
         agencias.add(agencia);
     }
@@ -38,9 +39,9 @@ import java.util.ArrayList;
      public void savepackag(Pacote pacote){
          pacotes.add(pacote);
      }
-     public void excpackag(String nomeDopacote){
+     public void excpackag(int id){
          for (int i = 0; i < pacotes.size(); i++){
-             if (pacotes.get(i).getNomeDoPacote() == nomeDopacote){
+             if (pacotes.get(i).getID() == id){
                  pacotes.remove(i);
              }
          }
