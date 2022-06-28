@@ -10,7 +10,7 @@ public class Menu {
     public Agencia agencia;
 
     public void MenuPrincipal(){
-        ClienteController cc = new ClienteController();
+        //ClienteController cc = new ClienteController();
         AgenciaController ag = new AgenciaController();
         Scanner scan = new Scanner(System.in);
         do {
@@ -41,7 +41,7 @@ public class Menu {
                     System.out.println("email:" );
                     String email = scan.next();
                     Cliente c = new Cliente(nome, sobrenome, cpf, sexo, endereco, telefone, email);
-                    cc.salvar(c);
+                    ag.savecltag(c);
                     break;
                 case "2":
                     System.out.println("Nome:");
@@ -53,7 +53,7 @@ public class Menu {
                     ArrayList<Cliente> cliente = new ArrayList<>();
                     Financeiro FinanceirodaAgenciaNova = new Financeiro();
                     Pacote PacotedaAgencianova = new Pacote();
-                    Agencia a = new Agencia(nomeag, cnpjag, localag, cliente ,FinanceirodaAgenciaNova, PacotedaAgencianova); // metodo para alocar cliente na agencia
+                    Agencia a = new Agencia(nomeag, cnpjag, localag, cliente ,FinanceirodaAgenciaNova, PacotedaAgencianova);
                     ag.salvar(a);
                     break;
                 case "3":
@@ -80,17 +80,23 @@ public class Menu {
             System.out.println("+====================================================================+");
             System.out.println("(1) Listar agencias de viagens");
             System.out.println("(2) Escolha seu pacote de viagens");
+            System.out.println("(3) Excluir pacote");
             System.out.println("(v) voltar");
             System.out.println("(0) sair");
             opcao = scan.next();
             switch (opcao){
                 case "1":
-                    System.out.println(ag);
+                    ag.printag();
                     break;
                 case "2":
-                    pack.salvar(pack);
+                    ag.printpack();
+                    pack.clientsavepack();
                     break;
                 case "3":
+                    pack.clientprintpack();
+                    pack.clientexcpack();
+                    break;
+                case "v":
                     MenuPrincipal();
                     break;
                 default:
@@ -102,6 +108,7 @@ public class Menu {
     }
 
     public void Submenu_modo_empresa(){
+        AgenciaController ag = new AgenciaController();
         PacoteController pack = new PacoteController();
         Scanner scan = new Scanner(System.in);
         do{
@@ -121,10 +128,10 @@ public class Menu {
                     System.out.println("Preço do Pacote:");
                     Double precoPack = scan.nextDouble();
                     Pacote pac = new Pacote(nomePack, listaDeCidades, precoPack);
-                    pack.salvar(pac);
+                    ag.savepackag(pac);
                     break;
                 case "2":
-                    pack.excluir(pac);
+                    ag.excpackag(pac);
                     break;
                 case "v":
                     MenuPrincipal();

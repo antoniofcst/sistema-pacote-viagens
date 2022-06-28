@@ -69,9 +69,9 @@ public class Agencia implements AgenciaInterface{
         setNomeAgencia(nomeAgencia);
         setCnpjAgencia(cnpjAgencia);
         setLocalDaAgencia(localDaAgencia);
+        setCliente(cliente);
         setFinanceiro(financeiro);
         setPacote(pacote);
-        setCliente(cliente);
     }
 
     @Override
