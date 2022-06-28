@@ -9,7 +9,6 @@ public class Menu {
     public Agencia agencia;
 
     public void MenuPrincipal(){
-        //ClienteController cc = new ClienteController();
         AgenciaController ag = new AgenciaController();
         Scanner scan = new Scanner(System.in);
         do {
