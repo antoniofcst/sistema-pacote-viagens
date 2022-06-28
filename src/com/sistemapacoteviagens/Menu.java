@@ -76,7 +76,7 @@ public class Menu {
             System.out.println("+====================================================================+");
             System.out.println("(1) Listar agencias de viagens");
             System.out.println("(2) Escolha seu pacote de viagens");
-            System.out.println("(3) ALterar pacote");
+            System.out.println("(3) Alterar pacote");
             System.out.println("(4) Cancelar pacote");
             System.out.println("(v) voltar");
             System.out.println("(0) sair");

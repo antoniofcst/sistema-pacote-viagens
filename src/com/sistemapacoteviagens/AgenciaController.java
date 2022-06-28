@@ -53,8 +53,8 @@ import java.util.ArrayList;
     @Override
     public String toString() {
         return "AgenciaController{" +
-                "agencias=" + clientes +
-                "clientes=" + agencias +
+                "agencias=" + agencias +
+                "clientes=" + clientes +
                 "pacotes=" + pacotes +
                 '}';
     }
