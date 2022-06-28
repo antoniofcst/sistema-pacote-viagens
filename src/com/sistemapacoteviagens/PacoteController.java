@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class PacoteController {
     private ArrayList<Pacote> pacotes = new ArrayList<>();
     private ArrayList<Cidade> cidades = new ArrayList<>();
+    private Financeiro financeiro;
     public void clientsavepack(Pacote pacote){
         pacotes.add(pacote);
     }
@@ -28,6 +29,7 @@ public class PacoteController {
             }
         }
     }
+
     @Override
     public String toString() {
         return "PacoteController{" +

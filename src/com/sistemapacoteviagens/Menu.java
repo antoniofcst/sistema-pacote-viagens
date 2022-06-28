@@ -3,7 +3,6 @@ package src.com.sistemapacoteviagens;
 import java.awt.geom.Arc2D;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Menu {
     public String opcao;
     public Cliente cliente;
@@ -43,22 +42,20 @@ public class Menu {
                     Cliente c = new Cliente(nome, sobrenome, cpf, sexo, endereco, telefone, email);
                     ag.savecltag(c);
                     break;
-                /*case "2":
+                case "2":
                     System.out.println("Nome:");
                     String nomeag = scan.next();
                     System.out.println("CNPJ:" );
                     String cnpjag = scan.next();
                     System.out.println("Local:");
                     String localag = scan.next();
-                    ArrayList<Cliente> cliente = new ArrayList<>();
                     Financeiro FinanceirodaAgenciaNova = new Financeiro();
-                    Pacote PacotedaAgencianova = new Pacote();
-                    Agencia a = new Agencia(nomeag, cnpjag, localag, cliente ,FinanceirodaAgenciaNova, PacotedaAgencianova);
+                    Agencia a = new Agencia(nomeag, cnpjag, localag, FinanceirodaAgenciaNova);
                     ag.salvar(a);
                     break;
                 case "3":
                     Submenu_modo_cliente();
-                    break;*/
+                    break;
                 case "4":
                     Submenu_modo_empresa();
                     break;
@@ -80,7 +77,8 @@ public class Menu {
             System.out.println("+====================================================================+");
             System.out.println("(1) Listar agencias de viagens");
             System.out.println("(2) Escolha seu pacote de viagens");
-            System.out.println("(3) Excluir pacote");
+            System.out.println("(3) ALterar pacote");
+            System.out.println("(4) Cancelar pacote");
             System.out.println("(v) voltar");
             System.out.println("(0) sair");
             opcao = scan.next();
@@ -88,17 +86,21 @@ public class Menu {
                 case "1":
                     ag.printag();
                     break;
-                /*case "2":
+                case "2":
                     ag.printpack();
-                    pack.clientsavepack();
+                    agencia.ComprarPacote();
                     break;
                 case "3":
-                    pack.clientprintpack();
-                    pack.clientexcpack();
+                    ag.printpack();
+                    agencia.alterarPacote();
+                    break;
+                case "4":
+                    ag.printpack();
+                    agencia.excluirPacote();
                     break;
                 case "v":
                     MenuPrincipal();
-                    break;*/
+                    break;
                 default:
                     if (opcao != "0" && opcao != "1" && opcao != "v") {
                         System.out.println("Opção inválida!");
@@ -117,6 +119,7 @@ public class Menu {
             System.out.println("+====================================================================+");
             System.out.println("(1) Criar pacotes");
             System.out.println("(2) Excluir pacotes");
+            System.out.println("(3) Listar meus clientes");
             System.out.println("(v) voltar");
             System.out.println("(0) sair");
             opcao = scan.next();
@@ -127,7 +130,6 @@ public class Menu {
                     ArrayList<Cidade> listaDeCidades = new ArrayList<>();
                     System.out.println("Preço do Pacote:");
                     Double precoPack = scan.nextDouble();
-                    //Cidade cidade = new Cidade();
                     Pacote pac = new Pacote(nomePack, listaDeCidades, precoPack);
                     ag.savepackag(pac);
                     break;
@@ -135,6 +137,9 @@ public class Menu {
                     ag.printpack();
                     int id = scan.nextInt();
                     ag.excpackag(id);
+                    break;
+                case "3":
+                    ag.printcltag();
                     break;
                 case "v":
                     MenuPrincipal();

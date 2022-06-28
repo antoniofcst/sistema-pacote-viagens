@@ -65,13 +65,11 @@ public class Agencia implements AgenciaInterface{
         this.saldoAgencia.add(precoDoPacote);
     }
 
-    public Agencia(String nomeAgencia, String cnpjAgencia, String localDaAgencia, ArrayList<Cliente> cliente, Financeiro financeiro, Pacote pacote) {
+    public Agencia(String nomeAgencia, String cnpjAgencia, String localDaAgencia, Financeiro financeiro) {
         setNomeAgencia(nomeAgencia);
         setCnpjAgencia(cnpjAgencia);
         setLocalDaAgencia(localDaAgencia);
-        setCliente(cliente);
         setFinanceiro(financeiro);
-        setPacote(pacote);
     }
 
     @Override
