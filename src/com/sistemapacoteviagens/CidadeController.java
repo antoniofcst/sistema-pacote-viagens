@@ -5,10 +5,6 @@ import java.util.ArrayList;
 public class CidadeController {
     private ArrayList<Cidade> cidades = new ArrayList<>();
     private ArrayList<String> atracoes = new ArrayList<>();
-    private String Atracao;
-
-    public String getAtracao() { return this.Atracao; }
-    public void setAtracao(String Atracao) { this.Atracao = Atracao; }
     public void salvar(Cidade cidade){
         cidades.add(cidade);
     }
@@ -19,10 +15,10 @@ public class CidadeController {
             }
         }
     }
-    public void salvaratc(String atracao){
+    public void salvaratc(ArrayList atracao){
         atracoes.add(atracao);
     }
-    public void excluiratc(String atracao){
+    public void excluiratc(ArrayList atracao){
         for (int i = 0; i < cidades.size(); i++){
             if (atracoes.get(i).getAtracoes() == atracao){
                 atracoes.remove(i);

@@ -130,9 +130,11 @@ public class Menu {
                     Cidade cidade = new Cidade();
                     Pacote pac = new Pacote(nomePack, listaDeCidades, precoPack);
                     ag.savepackag(pac);
-                    break;
+
                 case "2":
+                    //if (){
                     ag.printpack();
+                    //if (){
                     ag.excpackag(pac);
                     break;
                 case "v":
