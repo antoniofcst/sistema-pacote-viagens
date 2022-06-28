@@ -32,6 +32,9 @@ import java.util.ArrayList;
              }
          }
      }
+     public void printcltag(){
+         System.out.println(clientes);
+     }
      public void savepackag(Pacote pacote){
          pacotes.add(pacote);
      }

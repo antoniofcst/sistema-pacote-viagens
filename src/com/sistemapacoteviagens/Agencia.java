@@ -136,13 +136,13 @@ public class Agencia implements AgenciaInterface{
     @Override
     public String toString() {
         return "Agencia{" +
-                "nomeAgencia:'" + nomeAgencia + '\'' +
-                ", cnpjAgencia:'" + cnpjAgencia + '\'' +
-                ", localDaAgencia:'" + localDaAgencia + '\'' +
-                ", financeiro:" + financeiro +
-                ", saldoAgencia:" + saldoAgencia +
-                ", pacote:" + pacote +
-                ", cliente:" + cliente +
+                "nomeAgencia:'" + nomeAgencia + '\n' +
+                ", cnpjAgencia:'" + cnpjAgencia + '\n' +
+                ", localDaAgencia:'" + localDaAgencia + '\n' +
+                ", financeiro:" + financeiro + '\n' +
+                ", saldoAgencia:" + saldoAgencia + '\n' +
+                ", pacote:" + pacote + '\n' +
+                ", cliente:" + cliente + '\n' +
                 '}';
     }
 }

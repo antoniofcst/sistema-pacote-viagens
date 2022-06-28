@@ -127,10 +127,12 @@ public class Menu {
                     ArrayList<Cidade> listaDeCidades = new ArrayList<>();
                     System.out.println("Preço do Pacote:");
                     Double precoPack = scan.nextDouble();
+                    Cidade cidade = new Cidade();
                     Pacote pac = new Pacote(nomePack, listaDeCidades, precoPack);
                     ag.savepackag(pac);
                     break;
                 case "2":
+                    ag.printpack();
                     ag.excpackag(pac);
                     break;
                 case "v":

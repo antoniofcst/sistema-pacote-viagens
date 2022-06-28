@@ -52,15 +52,15 @@ public class Cliente extends Pessoa {
     @Override
     public String toString() {
         return "Cliente{" +
-                "Nome:" + getNome() +'\''+
-                ", sobrenome:" + getSobrenome() +'\''+
-                ", CPF:" + getCpf() +'\''+
-                ", Sexo:" + getSexo() +'\''+
-                ", endereco:" + getEndereco() +'\''+
-                ", telefone:" + telefone +
-                ", email:'" + email + '\'' +
-                ", endereco:'" + endereco + '\'' +
-                ", pacoteDoCliente:" + pacoteDoCliente +
+                "Nome:" + getNome() +'\n'+
+                ", sobrenome:" + getSobrenome() +'\n'+
+                ", CPF:" + getCpf() +'\n'+
+                ", Sexo:" + getSexo() +'\n'+
+                ", endereco:" + getEndereco() +'\n'+
+                ", telefone:" + telefone + '\n' +
+                ", email:'" + email + '\n' +
+                ", endereco:'" + endereco + '\n' +
+                ", pacoteDoCliente:" + pacoteDoCliente + '\n' +
                 '}';
     }
 }
