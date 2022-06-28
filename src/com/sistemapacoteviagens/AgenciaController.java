@@ -5,8 +5,8 @@ import javafx.print.PageOrientation;
 import java.util.ArrayList;
 
  public class AgenciaController {
-    private ArrayList<Agencia> agencias = new ArrayList<>();
     private ArrayList<Cliente> clientes = new ArrayList<>();
+    private ArrayList<Agencia> agencias = new ArrayList<>();
     private ArrayList<Pacote> pacotes = new ArrayList<>();
 
     public void salvar(Agencia agencia){
@@ -53,8 +53,8 @@ import java.util.ArrayList;
     @Override
     public String toString() {
         return "AgenciaController{" +
-                "agencias=" + agencias +
-                "clientes=" + clientes +
+                "agencias=" + clientes +
+                "clientes=" + agencias +
                 "pacotes=" + pacotes +
                 '}';
     }

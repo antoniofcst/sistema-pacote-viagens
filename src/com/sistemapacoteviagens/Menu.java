@@ -94,7 +94,7 @@ public class Menu {
                     agencia.alterarPacote();
                     break;
                 case "4":
-                    ag.printpack();
+                    ag.printcltag();
                     agencia.excluirPacote();
                     break;
                 case "v":
@@ -110,7 +110,6 @@ public class Menu {
 
     public void Submenu_modo_empresa(){
         AgenciaController ag = new AgenciaController();
-        PacoteController pack = new PacoteController();
         Scanner scan = new Scanner(System.in);
         do{
             System.out.println("+====================================================================+");
@@ -119,6 +118,7 @@ public class Menu {
             System.out.println("(1) Criar pacotes");
             System.out.println("(2) Excluir pacotes");
             System.out.println("(3) Listar meus clientes");
+            System.out.println("(4) Excluir clientes");
             System.out.println("(v) voltar");
             System.out.println("(0) sair");
             opcao = scan.next();
@@ -139,6 +139,11 @@ public class Menu {
                     break;
                 case "3":
                     ag.printcltag();
+                    break;
+                case "4":
+                    ag.printcltag();
+                    String cpf = scan.next();
+                    ag.excltag(cpf);
                     break;
                 case "v":
                     MenuPrincipal();
