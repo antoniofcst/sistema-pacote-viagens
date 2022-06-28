@@ -15,16 +15,8 @@ public class CidadeController {
             }
         }
     }
-    public void salvaratc(ArrayList atracao){
-        atracoes.add(atracao);
-    }
-    public void excluiratc(ArrayList atracao){
-        for (int i = 0; i < cidades.size(); i++){
-            if (atracoes.get(i).getAtracoes() == atracao){
-                atracoes.remove(i);
-            }
-        }
-    }
+    public void salvaratc(String atracao){ atracoes.add(atracao); }
+
     @Override
     public String toString() {
         return "CidadeController{" +
