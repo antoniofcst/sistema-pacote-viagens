@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class PacoteController {
 
     private String clientenomepack;
+    private String cidadedopacote;
     private String nomeDoCliente;
     private String precoDoPack;
     private int id;
@@ -12,6 +13,9 @@ public class PacoteController {
 
     public String getClientenomepack() { return clientenomepack; }
     public void setClientenomepack(String clientenomepack) { this.clientenomepack = clientenomepack; }
+    public String getCidadedopacote() { return cidadedopacote; }
+    public void setCidadedopacote(String cidadedopacote) { this.cidadedopacote = cidadedopacote; }
+
     public String getNomeDoCliente() { return nomeDoCliente; }
     public void setNomeDoCliente(String nomeDoCliente) { this.nomeDoCliente = nomeDoCliente; }
     public String getPrecoDoPack() { return precoDoPack; }
@@ -21,10 +25,10 @@ public class PacoteController {
 
     private ArrayList<String> nomesDoPacotes = new ArrayList<>();
 
-    public void comprarpacote(String nomeDoPacote, String nomeDoCliente, String precoDoPack){ nomesDoPacotes.add(nomeDoPacote); id = count++; }
-    public void clientexcpack(int id){
+    public void comprarpacote(String clientenomepack, String nomeDoCliente, String precoDoPack){ nomesDoPacotes.add(clientenomepack); id = count++; }
+    public void clientexcpack(String clientenomepack){
         for (int i = 0; i < nomesDoPacotes.size(); i++){
-            if (nomesDoPacotes.get(i).getId() == id){
+            if (nomesDoPacotes.get(i) == clientenomepack){
                 nomesDoPacotes.remove(i);
             }
         }

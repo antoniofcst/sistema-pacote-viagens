@@ -104,8 +104,8 @@ public class Menu {
                     String digito = scan.next();
                         if (digito.equals("Sim") || digito.equals("sim")) {
                             System.out.println("Altere aqui seu pacote!");
-                            System.out.println("Digite aqui o ID do pacote a ser excluido:");
-                            int id = scan.nextInt();
+                            System.out.println("Digite aqui o nome do pacote a ser excluido:");
+                            String id = scan.next();
                             pack.clientexcpack(id);
                             System.out.println("Digite aqui nome do novo pacote:");
                             String nompack = scan.next();
