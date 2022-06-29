@@ -22,9 +22,9 @@ public class PacoteController {
     private ArrayList<PacoteDoCliente> pacoteDoClientes = new ArrayList<>();
 
     public void comprarpacote(PacoteDoCliente pacoteDoCliente){ pacoteDoClientes.add(pacoteDoCliente); }
-    public void clientexcpack(String clientenomepack){
+    public void clientexcpack(int id){
         for (int i = 0; i < pacoteDoClientes.size(); i++){
-            if (pacoteDoClientes.get(i).getClientenomepack() == clientenomepack ){
+            if (pacoteDoClientes.get(i).getId() == id ){
                 pacoteDoClientes.remove(i);
             }
         }
@@ -36,6 +36,7 @@ public class PacoteController {
                 "pacotes:" + pacoteDoClientes + '\n' +
                 "clientename:" + nomeDoCliente + '\n' +
                 "preço:" + precoDoPack + '\n' +
+                "ID:" + id + '\n' +
                 '}';
     }
 }

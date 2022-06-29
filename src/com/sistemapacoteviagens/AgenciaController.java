@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
     public void salvar(Agencia agencia){
         agencias.add(agencia);
+        System.out.println("Agencia salva");
     }
 
     public void excluir(String cnpj){
@@ -39,6 +40,7 @@ import java.util.ArrayList;
      }
      public void savepackag(Pacote pacote){
          pacotes.add(pacote);
+         System.out.println("Pacote salvo");
      }
      public void excpackag(int id){
          for (int i = 0; i < pacotes.size(); i++){
