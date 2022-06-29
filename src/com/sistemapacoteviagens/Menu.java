@@ -162,7 +162,7 @@ public class Menu {
                     Cidade cidade = new Cidade(nomeDaCidade, estadoDoPack, paisDopack);
                     cidade.cadastrarAtracoes();
                     System.out.println("Preço do Pacote:");
-                    Double precoPack = scan.nextDouble();
+                    String precoPack = scan.next();
                     Pacote pac = new Pacote(nomePack, cidade, precoPack);
                     ag.savepackag(pac);
                     break;

@@ -2,16 +2,16 @@ package src.com.sistemapacoteviagens;
 
 public class Pacote {
     private Cidade cidade;
-    private double precoDoPacote;
+    private String precoDoPacote;
     private String nomeDoPacote;
     private static int count = 1;
     private int ID;
 
 
-    public double getPrecoDoPacote() {
+    public String getPrecoDoPacote() {
         return precoDoPacote;
     }
-    public void setPrecoDoPacote(double precoDoPacote) {
+    public void setPrecoDoPacote(String precoDoPacote) {
         this.precoDoPacote = precoDoPacote;
     }
 
@@ -21,7 +21,7 @@ public class Pacote {
     public int getID() { return ID; }
     public void setID(int ID) { this.ID = ID; }
 
-    public Pacote(String nomeDoPacote, Cidade cidade, double precoDoPacote) {
+    public Pacote(String nomeDoPacote, Cidade cidade, String precoDoPacote) {
         setNomeDoPacote(nomeDoPacote);
         setCidade(cidade);
         setPrecoDoPacote(precoDoPacote);
