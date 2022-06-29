@@ -97,9 +97,9 @@ public class Cidade {
     public String toString() {
         return "Cidade{" +
                 "nomeDaCidade:'" + nomeDaCidade + '\n' +
-                ", estadoDaCidade:'" + estadoDaCidade + '\n' +
-                ", paisDaCidade:'" + paisDaCidade + '\n' +
-                ", atracoes:" + atracoes + '\n' +
+                "estadoDaCidade:'" + estadoDaCidade + '\n' +
+                "paisDaCidade:'" + paisDaCidade + '\n' +
+                "atracoes:" + atracoes + '\n' +
                 '}';
     }
 }

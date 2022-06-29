@@ -31,9 +31,9 @@ public class Pacote {
     public String toString() {
         return "Pacote{" +
                 "cidade:" + cidade + '\n' +
-                ", nomeDoPacote:" + nomeDoPacote + '\n' +
-                ", precoDoPacote:" + precoDoPacote + '\n' +
-                ", ID=" + ID + '\n' +
+                "nomeDoPacote:" + nomeDoPacote + '\n' +
+                "precoDoPacote:" + precoDoPacote + '\n' +
+                "ID=" + ID + '\n' +
                 '}';
     }
 

@@ -135,12 +135,12 @@ public class Agencia implements AgenciaInterface{
     public String toString() {
         return "Agencia{" +
                 "nomeAgencia:'" + nomeAgencia + '\n' +
-                ", cnpjAgencia:'" + cnpjAgencia + '\n' +
-                ", localDaAgencia:'" + localDaAgencia + '\n' +
-                ", financeiro:" + financeiro + '\n' +
-                ", saldoAgencia:" + saldoAgencia + '\n' +
-                ", pacote:" + pacote + '\n' +
-                ", cliente:" + cliente + '\n' +
+                "cnpjAgencia:'" + cnpjAgencia + '\n' +
+                "localDaAgencia:'" + localDaAgencia + '\n' +
+                "financeiro:" + financeiro + '\n' +
+                "saldoAgencia:" + saldoAgencia + '\n' +
+                "pacote:" + pacote + '\n' +
+                "cliente:" + cliente + '\n' +
                 '}';
     }
 }

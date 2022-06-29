@@ -53,14 +53,14 @@ public class Cliente extends Pessoa {
     public String toString() {
         return "Cliente{" +
                 "Nome:" + getNome() +'\n'+
-                ", sobrenome:" + getSobrenome() +'\n'+
-                ", CPF:" + getCpf() +'\n'+
-                ", Sexo:" + getSexo() +'\n'+
-                ", endereco:" + getEndereco() +'\n'+
-                ", telefone:" + telefone + '\n' +
-                ", email:'" + email + '\n' +
-                ", endereco:'" + endereco + '\n' +
-                ", pacoteDoCliente:" + pacoteDoCliente + '\n' +
+                "sobrenome:" + getSobrenome() +'\n'+
+                "CPF:" + getCpf() +'\n'+
+                "Sexo:" + getSexo() +'\n'+
+                "endereco:" + getEndereco() +'\n'+
+                "telefone:" + telefone + '\n' +
+                "email:'" + email + '\n' +
+                "endereco:'" + endereco + '\n' +
+                "pacoteDoCliente:" + pacoteDoCliente + '\n' +
                 '}';
     }
 }
