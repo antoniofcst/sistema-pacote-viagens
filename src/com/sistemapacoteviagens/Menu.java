@@ -171,8 +171,10 @@ public class Menu {
                     break;
                 case "3":
                     ag.printpack();
+                    System.out.println("Digite o ID do pacote a ser excluido aqui:");
                     int id = scan.nextInt();
                     ag.excpackag(id);
+                    System.out.println("Pacote excluido com sucesso!!!");
                     break;
                 case "4":
                     ag.printcltag();
