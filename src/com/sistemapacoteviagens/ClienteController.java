@@ -21,7 +21,7 @@ public class ClienteController {
     @Override
     public String toString() {
         return "ClienteController{" +
-                "clientes=" + clientes +
+                "clientes:" + clientes +
                 '}' + '\n';
     }
 }

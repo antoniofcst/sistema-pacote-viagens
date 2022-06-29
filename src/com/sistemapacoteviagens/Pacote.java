@@ -34,9 +34,9 @@ public class Pacote {
     @Override
     public String toString() {
         return "Pacote{" +
-                "listaDeCidades=" + listaDeCidades + '\n' +
-                ", nomeDoPacote=" + nomeDoPacote + '\n' +
-                ", precoDoPacote=" + precoDoPacote + '\n' +
+                "listaDeCidades:" + listaDeCidades + '\n' +
+                ", nomeDoPacote:" + nomeDoPacote + '\n' +
+                ", precoDoPacote:" + precoDoPacote + '\n' +
                 ", ID=" + ID + '\n' +
                 '}';
     }

@@ -36,7 +36,6 @@ public class PacoteController {
                 "pacotes:" + pacoteDoClientes + '\n' +
                 "clientename:" + nomeDoCliente + '\n' +
                 "preço:" + precoDoPack + '\n' +
-                "id:" + id + '\n' +
                 '}';
     }
 }
