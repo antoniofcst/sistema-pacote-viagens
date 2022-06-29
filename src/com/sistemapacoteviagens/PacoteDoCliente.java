@@ -1,14 +1,18 @@
 package src.com.sistemapacoteviagens;
 
-import java.util.ArrayList;
-
-public class PacoteController {
-
+public class PacoteDoCliente {
     private String clientenomepack;
     private String nomeDoCliente;
     private String precoDoPack;
     private int id;
     private static int count = 1;
+
+    public PacoteDoCliente(String clientenomepack, String nomeDoCliente, String precoDoPack){
+        setClientenomepack(clientenomepack);
+        setNomeDoCliente(nomeDoCliente);
+        setPrecoDoPack(precoDoPack);
+        id = count++;
+    }
 
     public String getClientenomepack() { return clientenomepack; }
     public void setClientenomepack(String clientenomepack) { this.clientenomepack = clientenomepack; }
@@ -19,21 +23,9 @@ public class PacoteController {
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
-    private ArrayList<PacoteDoCliente> pacoteDoClientes = new ArrayList<>();
-
-    public void comprarpacote(PacoteDoCliente pacoteDoCliente){ pacoteDoClientes.add(pacoteDoCliente); }
-    public void clientexcpack(String clientenomepack){
-        for (int i = 0; i < pacoteDoClientes.size(); i++){
-            if (pacoteDoClientes.get(i).getClientenomepack() == clientenomepack ){
-                pacoteDoClientes.remove(i);
-            }
-        }
-    }
-    public void clientprintpack(){ System.out.println(pacoteDoClientes); }
-    @Override
     public String toString() {
         return "PacoteController{" +
-                "pacotes:" + pacoteDoClientes + '\n' +
+                "pacotes:" + clientenomepack + '\n' +
                 "clientename:" + nomeDoCliente + '\n' +
                 "preço:" + precoDoPack + '\n' +
                 "id:" + id + '\n' +

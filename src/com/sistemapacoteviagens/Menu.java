@@ -90,7 +90,8 @@ public class Menu {
                     String nomeDoCliente = scan.next();
                     System.out.println("Digite aqui o preço do pacote a ser comprado:");
                     String clienteprecopack = scan.next();
-                    pack.comprarpacote(nomepack, nomeDoCliente, clienteprecopack);
+                    PacoteDoCliente pk = new PacoteDoCliente(nomepack, nomeDoCliente, clienteprecopack);
+                    pack.comprarpacote(pk);
                     System.out.println("!!!PACOTE COMPRADO COM SUCESSO!!!");
                     break;
                 case "3":
@@ -114,7 +115,8 @@ public class Menu {
                             String nomeDCliente = scan.next();
                             System.out.println("Digite aqui o preço do pacote a ser comprado:");
                             String clientprecopack = scan.next();
-                            pack.comprarpacote(nompack, nomeDCliente, clientprecopack);
+                            PacoteDoCliente pkc = new PacoteDoCliente(nompack, nomeDCliente, clientprecopack);
+                            pack.comprarpacote(pkc);
                             System.out.println("!!!PACOTE ALTERADO COM SUCESSO!!!");
                         }
                         else {
