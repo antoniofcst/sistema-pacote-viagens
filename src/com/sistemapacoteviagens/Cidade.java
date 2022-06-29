@@ -57,16 +57,14 @@ public class Cidade {
             System.out.println("(2) Cadastrar 2° atração:");
             System.out.println("(3) Cadastrar 3° atração:");
             System.out.println("(4) Cadastrar 4° atração:");
-            System.out.println("(0) Encerrar cadastramento.");
+            System.out.println("(5) Encerrar cadastramento.");
             try {
                 opcao = Integer.parseInt(scan.nextLine().trim());
             } catch (NumberFormatException ex) {
-                System.out.println("Entrada inválida");
                 opcao = 0;
             }
             switch (opcao) {
                 case 0:
-                    System.out.println("Finalizando.......");
                     continue;
                 case 1:
                     System.out.println("Atração 1:");
@@ -89,10 +87,9 @@ public class Cidade {
                     atracoes.add(nomeAtracao4);
                     break;
                 default:
-                    System.out.println("Digite numeros de 1-4!");
                         break;
                     }
-            }while (opcao != 0);
+            }while (opcao != 5);
         }
 
 
