@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Menu {
     public String opcao;
-    public Cliente cliente;
-    public Agencia agencia;
     AgenciaController ag = new AgenciaController();
     PacoteController pack = new PacoteController();
     public void MenuPrincipal(){
@@ -155,10 +153,15 @@ public class Menu {
                 case "1":
                     System.out.println("Nome do Pacote:");
                     String nomePack = scan.next();
-                    ArrayList<Cidade> listaDeCidades = new ArrayList<>();
+                    System.out.println("Estado da cidade do pacote:");
+                    String estadoDoPack = scan.next();
+                    System.out.println("País da cidade do pacote:");
+                    String paisDopack = scan.next();
+                    Cidade cidade = new Cidade(nomePack, estadoDoPack, paisDopack);
+                    cidade.cadastrarAtracoes();
                     System.out.println("Preço do Pacote:");
                     Double precoPack = scan.nextDouble();
-                    Pacote pac = new Pacote(nomePack, listaDeCidades, precoPack);
+                    Pacote pac = new Pacote(nomePack, cidade, precoPack);
                     ag.savepackag(pac);
                     break;
                 case "2":

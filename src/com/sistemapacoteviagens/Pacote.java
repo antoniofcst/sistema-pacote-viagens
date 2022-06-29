@@ -1,17 +1,13 @@
 package src.com.sistemapacoteviagens;
 
-import java.util.ArrayList;
-
 public class Pacote {
-    private ArrayList<Cidade> listaDeCidades = new ArrayList<>();
+    private Cidade cidade;
     private double precoDoPacote;
     private String nomeDoPacote;
     private static int count = 1;
     private int ID;
-     public ArrayList<Cidade> getListaDeCidades() { return listaDeCidades; }
-    public void setListaDeCidades(ArrayList<Cidade> listaDeCidades) {
-        this.listaDeCidades = listaDeCidades;
-    }
+
+
     public double getPrecoDoPacote() {
         return precoDoPacote;
     }
@@ -25,8 +21,8 @@ public class Pacote {
     public int getID() { return ID; }
     public void setID(int ID) { this.ID = ID; }
 
-    public Pacote(String nomeDoPacote, ArrayList<Cidade> listaDeCidades, double precoDoPacote) {setNomeDoPacote(nomeDoPacote);
-        setListaDeCidades(listaDeCidades);
+    public Pacote(String nomeDoPacote, Cidade cidade, double precoDoPacote) {setNomeDoPacote(nomeDoPacote);
+        setCidade(cidade);
         setPrecoDoPacote(precoDoPacote);
         ID = count++;
     }
@@ -34,10 +30,18 @@ public class Pacote {
     @Override
     public String toString() {
         return "Pacote{" +
-                "listaDeCidades:" + listaDeCidades + '\n' +
+                "cidade:" + cidade + '\n' +
                 ", nomeDoPacote:" + nomeDoPacote + '\n' +
                 ", precoDoPacote:" + precoDoPacote + '\n' +
                 ", ID=" + ID + '\n' +
                 '}';
+    }
+
+    public Cidade getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
     }
 }
