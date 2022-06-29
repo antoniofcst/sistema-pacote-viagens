@@ -75,6 +75,7 @@ public class Menu {
             System.out.println("(1) Listar agencias de viagens");
             System.out.println("(2) Escolha seu pacote de viagens");
             System.out.println("(3) Alterar meu pacote");
+            System.out.println("(4) Mostrar meus pacotes");
             System.out.println("(v) voltar");
             opcao = scan.next();
             switch (opcao){
@@ -120,6 +121,9 @@ public class Menu {
                             System.out.println("Saindo.............");
                         }
                     break;
+                case "4":
+                    pack.clientprintpack();
+                    break;
                 case "v":
                     MenuPrincipal();
                     break;
@@ -139,9 +143,10 @@ public class Menu {
             System.out.println("                !!!Navegação em modo empresa!!!                       ");
             System.out.println("+====================================================================+");
             System.out.println("(1) Criar pacotes");
-            System.out.println("(2) Excluir pacotes");
-            System.out.println("(3) Listar meus clientes");
-            System.out.println("(4) Excluir clientes");
+            System.out.println("(2) Listar meus pacotes");
+            System.out.println("(3) Excluir pacotes");
+            System.out.println("(4) Listar meus clientes");
+            System.out.println("(5) Excluir clientes");
             System.out.println("(v) voltar");
             opcao = scan.next();
             switch (opcao){
@@ -156,13 +161,16 @@ public class Menu {
                     break;
                 case "2":
                     ag.printpack();
+                    break;
+                case "3":
+                    ag.printpack();
                     int id = scan.nextInt();
                     ag.excpackag(id);
                     break;
-                case "3":
+                case "4":
                     ag.printcltag();
                     break;
-                case "4":
+                case "5":
                     ag.printcltag();
                     String cpf = scan.next();
                     ag.excltag(cpf);
@@ -170,7 +178,7 @@ public class Menu {
                 case "v":
                     MenuPrincipal();
                 default:
-                    if (opcao != "0" && opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4" && opcao != "v") {
+                    if (opcao != "0" && opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4" && opcao != "5" && opcao != "v") {
                         break;
                     }
                     System.out.println("Opção inválida!");

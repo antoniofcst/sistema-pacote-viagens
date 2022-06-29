@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class PacoteController {
 
     private String clientenomepack;
-    private String cidadedopacote;
     private String nomeDoCliente;
     private String precoDoPack;
     private int id;
@@ -13,9 +12,6 @@ public class PacoteController {
 
     public String getClientenomepack() { return clientenomepack; }
     public void setClientenomepack(String clientenomepack) { this.clientenomepack = clientenomepack; }
-    public String getCidadedopacote() { return cidadedopacote; }
-    public void setCidadedopacote(String cidadedopacote) { this.cidadedopacote = cidadedopacote; }
-
     public String getNomeDoCliente() { return nomeDoCliente; }
     public void setNomeDoCliente(String nomeDoCliente) { this.nomeDoCliente = nomeDoCliente; }
     public String getPrecoDoPack() { return precoDoPack; }
