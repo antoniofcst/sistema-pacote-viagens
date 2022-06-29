@@ -47,8 +47,8 @@ public class Cidade {
     }
 
     public void cadastrarAtracoes() {
+        int opcao;
         Scanner scan = new Scanner(System.in);
-        String opcao;
         do {
             System.out.println("+====================================================================+");
             System.out.println("                        Cadastrar as atrações                         ");
@@ -58,35 +58,43 @@ public class Cidade {
             System.out.println("(3) Cadastrar 3° atração:");
             System.out.println("(4) Cadastrar 4° atração:");
             System.out.println("(0) Encerrar cadastramento.");
-            opcao = scan.next();
+            try {
+                opcao = Integer.parseInt(scan.nextLine().trim());
+            } catch (NumberFormatException ex) {
+                System.out.println("Entrada inválida");
+                opcao = 0;
+            }
             switch (opcao) {
-                case "1":
+                case 0:
+                    System.out.println("Finalizando.......");
+                    continue;
+                case 1:
                     System.out.println("Atração 1:");
                     String nomeAtracao1 = scan.next();
                     atracoes.add(nomeAtracao1);
                     break;
-                case "2":
+                case 2:
                     System.out.println("Atração 2:");
                     String nomeAtracao2 = scan.next();
                     atracoes.add(nomeAtracao2);
                     break;
-                case "3":
+                case 3:
                     System.out.println("Atração 3:");
                     String nomeAtracao3 = scan.next();
                     atracoes.add(nomeAtracao3);
                     break;
-                case "4":
+                case 4:
                     System.out.println("Atração 4:");
                     String nomeAtracao4 = scan.next();
                     atracoes.add(nomeAtracao4);
                     break;
                 default:
-                    if (opcao != "0" && opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4"  && opcao != "v") {
+                    System.out.println("Digite numeros de 1-4!");
                         break;
                     }
-            }
-        } while (opcao != "0");
-    }
+            }while (opcao != 0);
+        }
+
 
     @Override
     public String toString() {
