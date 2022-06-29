@@ -96,7 +96,7 @@ public class Agencia implements AgenciaInterface{
     public void ComprarPacote(Pacote pacote, Cliente cliente, String FormaDePagamento) {
         cliente.getPacoteDoCliente().add(pacote);
         getFinanceiro().choosePayment(FormaDePagamento);
-        setSaldoAgencia(pacote.getPrecoDoPacote());
+        //setSaldoAgencia(pacote.getPrecoDoPacote());
         System.out.println(cliente.getNome() + ", seu pacote foi comprado!");
     }
 
@@ -115,7 +115,7 @@ public class Agencia implements AgenciaInterface{
         cliente.getPacoteDoCliente().remove(pacoteComprado);
         cliente.getPacoteDoCliente().add(pacoteParaAlterar);
         getSaldoAgencia().remove(pacoteComprado.getPrecoDoPacote());
-        setSaldoAgencia(pacoteParaAlterar.getPrecoDoPacote());
+        //setSaldoAgencia(pacoteParaAlterar.getPrecoDoPacote());
         System.out.println(cliente.getNome() + ", seu pacote foi alterado!");
     }
 
