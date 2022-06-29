@@ -153,11 +153,13 @@ public class Menu {
                 case "1":
                     System.out.println("Nome do Pacote:");
                     String nomePack = scan.next();
+                    System.out.println("Nome da cidade:");
+                    String nomeDaCidade = scan.next();
                     System.out.println("Estado da cidade do pacote:");
                     String estadoDoPack = scan.next();
                     System.out.println("País da cidade do pacote:");
                     String paisDopack = scan.next();
-                    Cidade cidade = new Cidade(nomePack, estadoDoPack, paisDopack);
+                    Cidade cidade = new Cidade(nomeDaCidade, estadoDoPack, paisDopack);
                     cidade.cadastrarAtracoes();
                     System.out.println("Preço do Pacote:");
                     Double precoPack = scan.nextDouble();

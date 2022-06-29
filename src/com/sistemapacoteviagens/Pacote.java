@@ -21,7 +21,8 @@ public class Pacote {
     public int getID() { return ID; }
     public void setID(int ID) { this.ID = ID; }
 
-    public Pacote(String nomeDoPacote, Cidade cidade, double precoDoPacote) {setNomeDoPacote(nomeDoPacote);
+    public Pacote(String nomeDoPacote, Cidade cidade, double precoDoPacote) {
+        setNomeDoPacote(nomeDoPacote);
         setCidade(cidade);
         setPrecoDoPacote(precoDoPacote);
         ID = count++;
@@ -30,10 +31,10 @@ public class Pacote {
     @Override
     public String toString() {
         return "Pacote{" +
-                "cidade:" + cidade + '\n' +
                 "nomeDoPacote:" + nomeDoPacote + '\n' +
+                "cidade:" + cidade + '\n' +
                 "precoDoPacote:" + precoDoPacote + '\n' +
-                "ID=" + ID + '\n' +
+                "ID:" + ID + '\n' +
                 '}';
     }
 

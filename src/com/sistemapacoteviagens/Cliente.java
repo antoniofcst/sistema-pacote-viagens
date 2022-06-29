@@ -58,8 +58,8 @@ public class Cliente extends Pessoa {
                 "Sexo:" + getSexo() +'\n'+
                 "endereco:" + getEndereco() +'\n'+
                 "telefone:" + telefone + '\n' +
-                "email:'" + email + '\n' +
-                "endereco:'" + endereco + '\n' +
+                "email:" + email + '\n' +
+                "endereco:" + endereco + '\n' +
                 "pacoteDoCliente:" + pacoteDoCliente + '\n' +
                 '}';
     }
