@@ -75,7 +75,6 @@ public class Menu {
             System.out.println("(1) Listar agencias de viagens");
             System.out.println("(2) Escolha seu pacote de viagens");
             System.out.println("(3) Alterar meu pacote");
-            System.out.println("(4) Cancelar pacote");
             System.out.println("(v) voltar");
             opcao = scan.next();
             switch (opcao){
@@ -96,19 +95,36 @@ public class Menu {
                 case "3":
                     System.out.println("Nossos pacotes:");
                     ag.printpack();
-                    System.out.println("Seu pacote atual:");
+                    System.out.println("Seu(s) pacote(s):");
                     pack.clientprintpack();
-
-                    break;
-                case "4":
-                    ag.printcltag();
-                    agencia.excluirPacote();
+                    System.out.println("Voce realmente quer alterar seu pacote?");
+                    System.out.println("Seu pacote antigo sera deletado!");
+                    System.out.println("Caso a respota seja sim, digite sim!");
+                    System.out.println("Caso não, digite não!");
+                    String digito = scan.next();
+                        if (digito.equals("Sim") || digito.equals("sim")) {
+                            System.out.println("Altere aqui seu pacote!");
+                            System.out.println("Digite aqui o ID do pacote a ser excluido:");
+                            int id = scan.nextInt();
+                            pack.clientexcpack(id);
+                            System.out.println("Digite aqui nome do novo pacote:");
+                            String nompack = scan.next();
+                            System.out.println("Digite aqui o seu nome:");
+                            String nomeDCliente = scan.next();
+                            System.out.println("Digite aqui o preço do pacote a ser comprado:");
+                            String clientprecopack = scan.next();
+                            pack.comprarpacote(nompack, nomeDCliente, clientprecopack);
+                            System.out.println("!!!PACOTE ALTERADO COM SUCESSO!!!");
+                        }
+                        else {
+                            System.out.println("Saindo.............");
+                        }
                     break;
                 case "v":
                     MenuPrincipal();
                     break;
                 default:
-                    if (opcao != "0" && opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4" && opcao != "v") {
+                    if (opcao != "0" && opcao != "1" && opcao != "2" && opcao != "3" && opcao != "v") {
                             break;
                     }
                     System.out.println("Opção válida!");

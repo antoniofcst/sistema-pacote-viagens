@@ -25,9 +25,8 @@ public class Pacote {
     public int getID() { return ID; }
     public void setID(int ID) { this.ID = ID; }
 
-    public Pacote(String nomeDoPacote, ArrayList<Cidade> listaDeCidades, double precoDoPacote) {
-         setNomeDoPacote(nomeDoPacote);
-        setListaDeCidades(listaDeCidades); // provavelmente isso ta errado
+    public Pacote(String nomeDoPacote, ArrayList<Cidade> listaDeCidades, double precoDoPacote) {setNomeDoPacote(nomeDoPacote);
+        setListaDeCidades(listaDeCidades);
         setPrecoDoPacote(precoDoPacote);
         ID = count++;
     }
