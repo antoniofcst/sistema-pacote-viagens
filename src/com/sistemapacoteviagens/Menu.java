@@ -126,6 +126,8 @@ public class Menu {
                     pack.clientprintpack();
                     break;
                 case "5":
+                    System.out.println("Seus pacotes:");
+                    pack.clientprintpack();
                     System.out.println("Digite o ID do pacote que deseja excluir aqui:");
                     int id = scan.nextInt();
                     pack.clientexcpack(id);
