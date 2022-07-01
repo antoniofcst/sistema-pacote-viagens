@@ -74,6 +74,7 @@ public class Menu {
             System.out.println("(2) Escolha seu pacote de viagens");
             System.out.println("(3) Alterar meu pacote");
             System.out.println("(4) Mostrar meus pacotes");
+            System.out.println("(5) Excluir meus pacotes");
             System.out.println("(v) voltar");
             opcao = scan.next();
             switch (opcao){
@@ -123,6 +124,11 @@ public class Menu {
                     break;
                 case "4":
                     pack.clientprintpack();
+                    break;
+                case "5":
+                    System.out.println("Digite o ID do pacote que deseja excluir aqui:");
+                    int id = scan.nextInt();
+                    pack.clientexcpack(id);
                     break;
                 case "v":
                     MenuPrincipal();
